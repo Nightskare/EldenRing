@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "elden-guide-5faf0": {
+      "hosting": {
+        "elden-guide": [
+          "elden-guide-5faf0"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "elden-guide-5faf0"
+  }
+}
