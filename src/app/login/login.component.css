@@ -1,1 +1,5 @@
 @import '@angular/material/prebuilt-themes/pink-bluegrey.css';
+
+body{
+  text-align: center;
+}
