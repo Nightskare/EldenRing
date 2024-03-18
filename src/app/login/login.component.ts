@@ -6,6 +6,7 @@ import {
   Validators
 } from '@angular/forms';
 import {ErrorStateMatcher} from '@angular/material/core';
+import { AuthenticationService } from '../authentication.service';
 
 export class MyErrorStateMatcher implements ErrorStateMatcher {
   isErrorState(control: FormControl | null, form: FormGroupDirective | NgForm | null): boolean {
@@ -21,14 +22,20 @@ export class MyErrorStateMatcher implements ErrorStateMatcher {
 })
 
 export class LoginComponent {
-  email = new FormControl('', [Validators.required, Validators.email]);
+  emailCheck = new FormControl('', [Validators.required, Validators.email]);
+  passwordCheck = new FormControl('', [Validators.required]);
 
   getErrorMessage() {
-    if (this.email.hasError('required')) {
+    if (this.emailCheck.hasError('required')) {
       return 'You must enter a value';
     }
-
-    return this.email.hasError('email') ? 'Not a valid email' : '';
+    if (this.passwordCheck.hasError('required')){
+      return 'Password required';
+    }
+    return this.emailCheck.hasError('email') ? 'Not a valid email' : '';
   }
+
   matcher = new MyErrorStateMatcher();
+
+  constructor(public authenticationService: AuthenticationService) {}
 }
