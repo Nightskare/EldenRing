@@ -1,0 +1,25 @@
+<div>
+  <div>
+    <mat-form-field appearance="fill">
+      <mat-label>Email</mat-label>
+      <input type="email" matInput [formControl]="emailCheck" [errorStateMatcher]="matcher" placeholder="Ex. pat@patrouille.com" required #email>
+    @if (emailCheck.hasError('email') && !emailCheck.hasError('required')) {
+      <mat-error>Entrer un mail valide</mat-error>
+    }
+    @if (emailCheck.hasError('required')) {
+      <mat-error>Un email est <strong>requis</strong></mat-error>
+    }
+    </mat-form-field>
+  </div>
+  <div>
+    <mat-form-field appearance="fill">
+      <mat-label>Mot de passe</mat-label>
+      <input matInput placeholder="" type="password" required #password>
+    </mat-form-field>
+  </div>
+  <div>
+    <button mat-raised-button color="primary" (click)="authenticationService.SignIn(email.value, password.value)">Se connecter</button>
+    &nbsp;
+    <button mat-raised-button color="primary" (click)="authenticationService.SignUp(email.value, password.value)">Créer un compte</button>
+  </div>
+</div>
