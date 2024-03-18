@@ -1,0 +1,9 @@
+@import '@angular/material/prebuilt-themes/pink-bluegrey.css';
+
+
+.auth-container{
+    text-align: center;
+}
+.mat-form-field{
+    width: 50%;
+}
