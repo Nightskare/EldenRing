@@ -8,6 +8,7 @@ import {
 import {ErrorStateMatcher} from '@angular/material/core';
 import { AuthenticationService } from '../authentication.service';
 
+
 export class MyErrorStateMatcher implements ErrorStateMatcher {
   isErrorState(control: FormControl | null, form: FormGroupDirective | NgForm | null): boolean {
     const isSubmitted = form && form.submitted;
@@ -38,4 +39,19 @@ export class LoginComponent {
   matcher = new MyErrorStateMatcher();
 
   constructor(public authenticationService: AuthenticationService) {}
+
+  async login(email : string | null, password : string | null){
+    let token = this.authenticationService.SignIn(email, password);
+    // const osecour = document.getElementById("USERNAME");
+    // if (osecour && auth.currentUser?.email) osecour.innerText = auth.currentUser?.email;
+
+  }
+
+  async newAccount(email : string | null, password : string | null){
+    let token = this.authenticationService.SignUp(email, password);
+    // const osecour = document.getElementById("USERNAME");
+    // if (osecour && auth.currentUser?.email) osecour.innerText = auth.currentUser?.email;
+  }
+
+
 }

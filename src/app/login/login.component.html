@@ -1,5 +1,6 @@
 <div>
   <div>
+    <p>{{authenticationService.email}}</p>
     <mat-form-field appearance="fill">
       <mat-label>Email</mat-label>
       <input type="email" matInput [formControl]="emailCheck" [errorStateMatcher]="matcher" placeholder="Ex. pat@patrouille.com" required #email>
@@ -18,8 +19,8 @@
     </mat-form-field>
   </div>
   <div>
-    <button mat-raised-button color="primary" (click)="authenticationService.SignIn(email.value, password.value)">Se connecter</button>
+    <button mat-raised-button color="primary" (click)="login(email.value, password.value)">Se connecter</button>
     &nbsp;
-    <button mat-raised-button color="primary" (click)="authenticationService.SignUp(email.value, password.value)">Créer un compte</button>
+    <button mat-raised-button color="primary" (click)="newAccount(email.value, password.value)">Créer un compte</button>
   </div>
 </div>
