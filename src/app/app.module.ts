@@ -18,12 +18,15 @@ import { AuthenticationService } from './authentication.service';
 import { SignInOrLogInComponent } from './sign-in-or-log-in/sign-in-or-log-in.component';
 import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
 import { CommonModule } from '@angular/common';
+import { TestComponent } from './test/test/test.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    SignInOrLogInComponent
+    SignInOrLogInComponent,
+    TestComponent
   ],
   imports: [
     BrowserModule,
@@ -42,7 +45,8 @@ import { CommonModule } from '@angular/common';
     CommonModule,
     RouterOutlet,
     RouterLink,
-    RouterLinkActive
+    RouterLinkActive,
+    HttpClientModule
   ],
   providers: [
     provideAnimationsAsync(),
