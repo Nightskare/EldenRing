@@ -1,0 +1,29 @@
+<div>
+    <div>
+      <p>{{authenticationService.email}}</p>
+      <mat-form-field appearance="fill">
+        <mat-label>Email</mat-label>
+        <input type="email" matInput [formControl]="emailCheck" [errorStateMatcher]="matcher" placeholder="Ex. pat@patrouille.com" required #email>
+        <mat-error *ngIf="emailCheck.hasError('email') && !emailCheck.hasError('required')">Entrer un mail valide</mat-error>
+        <mat-error *ngIf="emailCheck.hasError('required')">Un email est <strong>requis</strong></mat-error>
+      </mat-form-field>
+    </div>
+      <div>
+        <mat-form-field appearance="fill">
+          <mat-label>Mot de passe</mat-label>
+          <input matInput placeholder="" type="password" required #password>
+        </mat-form-field>
+      </div>
+      <p>Confirmation du mot de passe</p>
+      <div>
+        <mat-form-field appearance="fill">
+          <mat-label>Mot de passe</mat-label>
+          <input matInput placeholder="" type="password" required #confirmPassword>
+        </mat-form-field>
+      </div>
+      <div *ngIf="password.value !== confirmPassword.value">
+        <mat-error>Les mots de passe ne correspondent pas</mat-error>
+      </div>
+      <div>
+        <button mat-raised-button color="primary" (click)="newAccount(email.value, password.value, confirmPassword.value)">Créer un compte</button>
+    </div>

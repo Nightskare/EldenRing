@@ -18,12 +18,14 @@ import { AuthenticationService } from './authentication.service';
 import { SignInOrLogInComponent } from './sign-in-or-log-in/sign-in-or-log-in.component';
 import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
 import { CommonModule } from '@angular/common';
+import { SignInComponent } from './sign-in/sign-in.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    SignInOrLogInComponent
+    SignInOrLogInComponent,
+    SignInComponent
   ],
   imports: [
     BrowserModule,
