@@ -9,5 +9,4 @@ import { provideFirebaseApp } from '@angular/fire/app';
 })
 export class AppComponent {
   title = 'elden-guide';
-
 }

@@ -18,6 +18,8 @@ import { AuthenticationService } from './authentication.service';
 import { SignInOrLogInComponent } from './sign-in-or-log-in/sign-in-or-log-in.component';
 import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
 import { CommonModule } from '@angular/common';
+import { TestComponent } from './test/test/test.component';
+import { HttpClientModule } from '@angular/common/http';
 import { AccueilComponent } from './accueil/accueil.component';
 import { SignInComponent } from './sign-in/sign-in.component';
 import { HeaderComponent } from './header/header.component';
@@ -28,6 +30,7 @@ import {MatToolbarModule} from '@angular/material/toolbar';
     AppComponent,
     LoginComponent,
     SignInOrLogInComponent,
+    TestComponent,
     AccueilComponent,
     SignInComponent,
     HeaderComponent
@@ -50,6 +53,7 @@ import {MatToolbarModule} from '@angular/material/toolbar';
     RouterOutlet,
     RouterLink,
     RouterLinkActive,
+    HttpClientModule,
     MatToolbarModule
   ],
   providers: [
