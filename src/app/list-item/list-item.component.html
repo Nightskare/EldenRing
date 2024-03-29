@@ -1,14 +1,13 @@
 
     <mat-form-field hintLabel="Item's name">
       <mat-label>Enter some item's name</mat-label>
-      <input placeholder="ex : bloodhound's fang">
+      <input matInput placeholder="ex : bloodhound's fang">
     </mat-form-field>
   
     <mat-form-field hintLabel="Item's type">
     <mat-label>choose item's type</mat-label>
     <mat-select placeholder="Click here" >
-      <mat-select-trigger>'All'</mat-select-trigger>
-        <mat-option>All</mat-option>
+        <mat-option value="all"> All</mat-option>
         <mat-option value="weapon">Weapons</mat-option>
         <mat-option value="shield">Shields</mat-option>
         <mat-option value="armor">Armors</mat-option>

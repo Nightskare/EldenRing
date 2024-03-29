@@ -1,6 +1,3 @@
-.example-container mat-form-field + mat-form-field {
-    margin-left: 8px;
-  }
 
 .example-form-fields {
     display: flex;
@@ -8,9 +5,8 @@
     align-items: flex-start;
 }
 
-.mat-select {
-  border: 1px solid lightseagreen !important ;
-  background: lightseagreen;
-  height: 30px !important;
+.example-additional-selection {
+  opacity: 0.75;
+  font-size: 0.75em;
 }
 
