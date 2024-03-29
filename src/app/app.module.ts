@@ -19,13 +19,16 @@ import { SignInOrLogInComponent } from './sign-in-or-log-in/sign-in-or-log-in.co
 import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { SignInComponent } from './sign-in/sign-in.component';
+import { HeaderComponent } from './header/header.component';
+import {MatToolbarModule} from '@angular/material/toolbar';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     SignInOrLogInComponent,
-    SignInComponent
+    SignInComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
@@ -44,7 +47,8 @@ import { SignInComponent } from './sign-in/sign-in.component';
     CommonModule,
     RouterOutlet,
     RouterLink,
-    RouterLinkActive
+    RouterLinkActive,
+    MatToolbarModule
   ],
   providers: [
     provideAnimationsAsync(),
