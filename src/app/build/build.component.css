@@ -1,0 +1,6 @@
+.build{
+    display: flex;
+}
+div{
+    flex: 1 1 auto;
+}
