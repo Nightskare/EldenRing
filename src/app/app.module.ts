@@ -20,6 +20,8 @@ import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { AccueilComponent } from './accueil/accueil.component';
 
+
+
 @NgModule({
   declarations: [
     AppComponent,
