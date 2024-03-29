@@ -1,28 +1,34 @@
-import { Component } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { Weapons } from '../weapons';
 import { ApiService } from '../api.service';
+import {MatTable, MatTableDataSource} from '@angular/material/table';
 
 @Component({
   selector: 'app-tableau-weapon',
   templateUrl: './tableau-weapon.component.html',
   styleUrl: './tableau-weapon.component.css'
 })
-export class TableauWeaponComponent {
+export class TableauWeaponComponent implements OnInit{
   displayedColumns: string[] = ['data.name', 'data.image', 'data.description', 'data.category', 'data.weight', 'data.attack', 'data.defense', 'data.requiredAttributes', 'data.scalesWith'];
-  dataSource : Array<Weapons> = this.getAllWeapons();
+  @ViewChild(MatTable) table !: MatTable<any>;
+  dataSource = new MatTableDataSource<Weapons>();
   constructor(public apiService : ApiService) {}
+  ngOnInit(){
+    this.getAllWeapons();
+  }
 
-  public  getAllWeapons() : Array<Weapons>{
-    var tableau = document.getElementById("data");
-    var myData : Array<Weapons> = [];
+  public getAllWeapons() {
     this.apiService.getIds("weapons").subscribe(a => {
       for(let i : number = 0; i < a.count; i++){
         this.apiService.getWeapons(a.data[i].id).subscribe(b => {
-          myData.push(b);
+          this.dataSource.data.push(b);
+          this.table.renderRows();
+          this.table.dataSource
+          console.log(this.table);
+          console.log(this.table.dataSource);
         });
       }
     });
-    return myData;
     //myData.sort((a, b) => (a.data.id > b.data.id) ? 1 : (a.data.id < b.data.id) ? -1 : 0);
   }
 }
