@@ -1,0 +1,19 @@
+
+.example-form-fields {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+}
+
+.barre_recherche{
+  margin: 8px 8px 8px 0;
+  float: left;
+}
+.filtre_deroulant{
+  margin: 8px 8px 8px 0;
+  float: left;
+}
+
+table {
+  width: 100%;
+}

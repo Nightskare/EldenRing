@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { initializeApp, provideFirebaseApp } from '@angular/fire/app';
@@ -18,10 +17,19 @@ import { AuthenticationService } from './authentication.service';
 import { SignInOrLogInComponent } from './sign-in-or-log-in/sign-in-or-log-in.component';
 import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
 import { CommonModule } from '@angular/common';
+import { TestComponent } from './test/test/test.component';
+import { HttpClientModule } from '@angular/common/http';
+import { AccueilComponent } from './accueil/accueil.component';
 import { SignInComponent } from './sign-in/sign-in.component';
 import { BuildComponent } from './build/build.component';
 import { StatComponent } from './stat/stat.component';
 import { CharacterComponent } from './character/character.component';
+import { ListItemComponent } from './list-item/list-item.component';
+import {MatSelectModule} from '@angular/material/select';
+import {MatTableModule} from '@angular/material/table';
+import { HeaderComponent } from './header/header.component';
+import {MatToolbarModule} from '@angular/material/toolbar';
+
 
 @NgModule({
   declarations: [
@@ -32,6 +40,11 @@ import { CharacterComponent } from './character/character.component';
     BuildComponent,
     StatComponent,
     CharacterComponent
+    ListItemComponent
+    TestComponent,
+    AccueilComponent,
+    SignInComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
@@ -50,7 +63,11 @@ import { CharacterComponent } from './character/character.component';
     CommonModule,
     RouterOutlet,
     RouterLink,
-    RouterLinkActive
+    RouterLinkActive,
+    MatSelectModule,
+    MatTableModule,
+    HttpClientModule,
+    MatToolbarModule
   ],
   providers: [
     provideAnimationsAsync(),
