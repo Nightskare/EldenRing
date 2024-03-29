@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { initializeApp, provideFirebaseApp } from '@angular/fire/app';
@@ -22,6 +21,9 @@ import { TestComponent } from './test/test/test.component';
 import { HttpClientModule } from '@angular/common/http';
 import { AccueilComponent } from './accueil/accueil.component';
 import { SignInComponent } from './sign-in/sign-in.component';
+import { ListItemComponent } from './list-item/list-item.component';
+import {MatSelectModule} from '@angular/material/select';
+import {MatTableModule} from '@angular/material/table';
 import { HeaderComponent } from './header/header.component';
 import {MatToolbarModule} from '@angular/material/toolbar';
 
@@ -30,6 +32,8 @@ import {MatToolbarModule} from '@angular/material/toolbar';
     AppComponent,
     LoginComponent,
     SignInOrLogInComponent,
+    SignInComponent,
+    ListItemComponent
     TestComponent,
     AccueilComponent,
     SignInComponent,
@@ -53,6 +57,8 @@ import {MatToolbarModule} from '@angular/material/toolbar';
     RouterOutlet,
     RouterLink,
     RouterLinkActive,
+    MatSelectModule,
+    MatTableModule,
     HttpClientModule,
     MatToolbarModule
   ],
