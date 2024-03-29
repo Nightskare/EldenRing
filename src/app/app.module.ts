@@ -20,13 +20,20 @@ import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { TestComponent } from './test/test/test.component';
 import { HttpClientModule } from '@angular/common/http';
+import { AccueilComponent } from './accueil/accueil.component';
+import { SignInComponent } from './sign-in/sign-in.component';
+import { HeaderComponent } from './header/header.component';
+import {MatToolbarModule} from '@angular/material/toolbar';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     SignInOrLogInComponent,
-    TestComponent
+    TestComponent,
+    AccueilComponent,
+    SignInComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
@@ -46,7 +53,8 @@ import { HttpClientModule } from '@angular/common/http';
     RouterOutlet,
     RouterLink,
     RouterLinkActive,
-    HttpClientModule
+    HttpClientModule,
+    MatToolbarModule
   ],
   providers: [
     provideAnimationsAsync(),
