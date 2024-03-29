@@ -19,13 +19,19 @@ import { SignInOrLogInComponent } from './sign-in-or-log-in/sign-in-or-log-in.co
 import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { SignInComponent } from './sign-in/sign-in.component';
+import { BuildComponent } from './build/build.component';
+import { StatComponent } from './stat/stat.component';
+import { CharacterComponent } from './character/character.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     SignInOrLogInComponent,
-    SignInComponent
+    SignInComponent,
+    BuildComponent,
+    StatComponent,
+    CharacterComponent
   ],
   imports: [
     BrowserModule,
