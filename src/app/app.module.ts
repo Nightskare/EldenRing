@@ -20,6 +20,8 @@ import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { AccueilComponent } from './accueil/accueil.component';
 import { SignInComponent } from './sign-in/sign-in.component';
+import { HeaderComponent } from './header/header.component';
+import {MatToolbarModule} from '@angular/material/toolbar';
 
 @NgModule({
   declarations: [
@@ -27,7 +29,8 @@ import { SignInComponent } from './sign-in/sign-in.component';
     LoginComponent,
     SignInOrLogInComponent,
     AccueilComponent,
-    SignInComponent
+    SignInComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
@@ -46,7 +49,8 @@ import { SignInComponent } from './sign-in/sign-in.component';
     CommonModule,
     RouterOutlet,
     RouterLink,
-    RouterLinkActive
+    RouterLinkActive,
+    MatToolbarModule
   ],
   providers: [
     provideAnimationsAsync(),

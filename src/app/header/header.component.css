@@ -1,0 +1,48 @@
+.example-spacer {
+    flex: 1 1 auto;
+  }
+
+  section {
+    display: table;
+  }
+  
+  .label {
+    display: table-cell;
+    font-size: 14px;
+    margin-left: 8px;
+    min-width: 120px;
+  }
+  
+  .button-row {
+    display: flextable-cell;
+    max-width: 600px;
+  }
+  
+  .button-row .mat-mdc-button-base {
+    margin: 8px 8px 8px 0;
+    color: #efd005
+  }
+  
+  .flex-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  
+  .button-container {
+    display: flex;
+    justify-content: center;
+    width: 120px;
+  }
+
+  .button-milieu {
+    display: flextable-cell;
+    max-width: 600px;
+  }
+  
+  .button-milieu .mat-mdc-button-base {
+    margin: 8px 8px 15px 30px;
+    color: #efd005
+  }
+
+  
