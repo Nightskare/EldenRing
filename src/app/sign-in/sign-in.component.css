@@ -4,6 +4,13 @@ mat-form-field{
   width: 50%
 }
 
+#section{ 
+  background-image: url("/assets/Fond_login.jpg"); 
+  height: 1000px;
+  background-size: 100%;
+  overflow-x: hidden;
+}
+
 div{
   text-align: center;
 }
