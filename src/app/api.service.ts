@@ -25,7 +25,7 @@ export class ApiService {
   }
 
   getShields(id : string) : Observable<Shields>{
-    return this.http.get<Shields>(this.baseurl + "shield/" + id);
+    return this.http.get<Shields>(this.baseurl + "shields/" + id);
   }
 
   getTalismans(id : string) : Observable<Talismans>{
