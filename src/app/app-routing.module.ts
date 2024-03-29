@@ -6,7 +6,7 @@ import { TestComponent } from './test/test/test.component';
 import { AccueilComponent } from './accueil/accueil.component';
 import { SignInComponent } from './sign-in/sign-in.component';
 
-const routes: Routes = [{path:'login',component:LoginComponent}, {path:"api", component:TestComponent},{path:'signin',component:SignInComponent}, {path:"**",component:SignInOrLogInComponent}];
+const routes: Routes = [{path:'login',component:LoginComponent}, {path:"api", component:TestComponent},{path:'signin',component:SignInComponent}, {path:"**",component:AccueilComponent}];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
