@@ -1,9 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 import { Shields } from '../shields';
+import { MatTable, MatTableDataSource } from '@angular/material/table';
+import { ApiService } from '../api.service';
 
-const SHIELD_DATA: Shields[] = [
-
-];
 
 @Component({
   selector: 'app-tableau-shield',
@@ -11,6 +10,23 @@ const SHIELD_DATA: Shields[] = [
   styleUrl: './tableau-shield.component.css'
 })
 export class TableauShieldComponent {
-  displayedColumns: string[] = ['name', 'image', 'description', 'category', 'weight', 'attack', 'defense', 'requiredAttributes', 'scalesWith'];
-  dataSource = SHIELD_DATA;
+  displayedColumns: string[] = ['data.name', 'data.image', 'data.description', 'data.category', 'data.weight', 'data.attack', 'data.defense', 'data.requiredAttributes', 'data.scalesWith'];
+  @ViewChild(MatTable) table !: MatTable<any>;
+  dataSource = new MatTableDataSource<Shields>();
+  constructor(public apiService : ApiService) {}
+  ngOnInit(){
+    this.getAllShields();
+  }
+
+  public getAllShields() {
+    this.apiService.getIds("shields").subscribe(a => {
+      for(let i : number = 0; i < a.count; i++){
+        this.apiService.getShields(a.data[i].id).subscribe(b => {
+          this.dataSource.data.push(b);
+          this.table.renderRows();
+        });
+      }
+    });
+    //myData.sort((a, b) => (a.data.id > b.data.id) ? 1 : (a.data.id < b.data.id) ? -1 : 0);
+  }
 }

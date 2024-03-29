@@ -7,8 +7,11 @@ import { AccueilComponent } from './accueil/accueil.component';
 import { SignInComponent } from './sign-in/sign-in.component';
 import { ListItemComponent } from './list-item/list-item.component';
 import { TableauWeaponComponent } from './tableau-weapon/tableau-weapon.component';
+import { TableauArmorComponent } from './tableau-armor/tableau-armor.component';
+import { TableauTalismanComponent } from './tableau-talisman/tableau-talisman.component';
+import { TableauShieldComponent } from './tableau-shield/tableau-shield.component';
 
-const routes: Routes = [{path:'login',component:LoginComponent},{path:'tabWeapon',component:TableauWeaponComponent}, {path:"api", component:TestComponent},{path:'signin',component:SignInComponent}, {path:"**",component:AccueilComponent}];
+const routes: Routes = [{path:'login',component:LoginComponent},{path:'tabWeapon',component:TableauWeaponComponent},{path:'tabArmor',component:TableauArmorComponent},{path:'tabTalisman',component:TableauTalismanComponent},{path:'tabShield',component:TableauShieldComponent},{path:"api", component:TestComponent},{path:'signin',component:SignInComponent}, {path:"**",component:AccueilComponent}];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

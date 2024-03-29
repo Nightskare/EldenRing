@@ -1,10 +1,9 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 import { Talismans } from '../talismans';
+import { MatTable, MatTableDataSource } from '@angular/material/table';
+import { ApiService } from '../api.service';
 
 
-const TALISMAN_DATA: Talismans[] = [
-
-];
 
 @Component({
   selector: 'app-tableau-talisman',
@@ -12,6 +11,23 @@ const TALISMAN_DATA: Talismans[] = [
   styleUrl: './tableau-talisman.component.css'
 })
 export class TableauTalismanComponent {
-  displayedColumns: string[] = ['name', 'image', 'description', 'effects'];
-  dataSource = TALISMAN_DATA;
+  displayedColumns: string[] = ['data.name', 'data.image', 'data.description', 'data.effects'];
+  @ViewChild(MatTable) table !: MatTable<any>;
+  dataSource = new MatTableDataSource<Talismans>();
+  constructor(public apiService : ApiService) {}
+  ngOnInit(){
+    this.getAllTalismans();
+  }
+
+  public getAllTalismans() {
+    this.apiService.getIds("talismans").subscribe(a => {
+      for(let i : number = 0; i < a.count; i++){
+        this.apiService.getTalismans(a.data[i].id).subscribe(b => {
+          this.dataSource.data.push(b);
+          this.table.renderRows();
+        });
+      }
+    });
+    //myData.sort((a, b) => (a.data.id > b.data.id) ? 1 : (a.data.id < b.data.id) ? -1 : 0);
+  }
 }

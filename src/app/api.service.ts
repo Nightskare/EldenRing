@@ -12,6 +12,7 @@ import { IdList } from './id-list';
   providedIn: 'root'
 })
 export class ApiService {
+  [x: string]: any;
   public baseurl = "https://eldenring.fanapis.com/api/";
   constructor(private http : HttpClient) {  }
 
