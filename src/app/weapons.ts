@@ -7,21 +7,19 @@ export interface Weapons {
     description : string;
     category : string;
     weight : number;
-    attack : [{
-      name : string;
-      amount : number;
-    }];
-    defense : [{
-      name : string;
-      amount : number;
-    }];
-    requiredAttributes : [{
-      name : string;
-      amount : number;
-    }];
-    scalesWith : [{
-      name : string;
-      scaling : string;
-    }];
+    attack : Array<PropertiesType>;
+    defense : Array<PropertiesType>;
+    requiredAttributes : Array<PropertiesType>;
+    scalesWith : Array<scalesType>;
   }
+}
+
+interface PropertiesType {
+  name : string;
+  amount : number;
+}
+
+interface scalesType{
+  name : string;
+  scaling : string;
 }

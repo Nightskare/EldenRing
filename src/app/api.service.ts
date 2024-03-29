@@ -6,6 +6,7 @@ import { Classes } from './classes';
 import { Shields } from './shields';
 import { Talismans } from './talismans';
 import { Weapons } from './weapons';
+import { IdList } from './id-list';
 
 @Injectable({
   providedIn: 'root'
@@ -32,5 +33,9 @@ export class ApiService {
 
   getWeapons(id : string) : Observable<Weapons>{
     return this.http.get<Weapons>(this.baseurl + "weapons/" + id);
+  }
+
+  getIds(source : string) : Observable<IdList>{
+      return this.http.get<IdList>(this.baseurl + source.toLowerCase());
   }
 }

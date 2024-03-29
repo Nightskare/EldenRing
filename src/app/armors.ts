@@ -7,13 +7,12 @@ export interface Armors {
     description : string; // Short description of the armor piece
     category : string; // Category of the armor piece. Example: Leg Piece, Helmet, etc.
     weight : number; // How much this armor piece weights in your inventory
-    dmgNegation : {
-      name : string;
-      amount : number;
-    }; // How much damage this armor piece negates. Example: { "name": "Strike", amount: 6 }
-    resistance : {
-      name : string;
-      amount : number;
-    } // How much resistance wearing this armor piece provides. Example: { "name": "Poise", amount: 10 }
+    dmgNegation : Array<PropertiesType>; // How much damage this armor piece negates. Example: { "name": "Strike", amount: 6 }
+    resistance : Array<PropertiesType> // How much resistance wearing this armor piece provides. Example: { "name": "Poise", amount: 10 }
   }
+}
+
+interface PropertiesType {
+  name : string;
+  amount : number;
 }
