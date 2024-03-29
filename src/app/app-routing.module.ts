@@ -3,8 +3,9 @@ import { RouterModule, Routes } from '@angular/router';
 import { LoginComponent } from './login/login.component';
 import { SignInOrLogInComponent } from './sign-in-or-log-in/sign-in-or-log-in.component';
 import { SignInComponent } from './sign-in/sign-in.component';
+import { ListItemComponent } from './list-item/list-item.component';
 
-const routes: Routes = [{path:'login',component:LoginComponent},{path:'signin',component:SignInComponent},{path:"**",component:SignInOrLogInComponent}];
+const routes: Routes = [{path:'login',component:LoginComponent},{path:'signin',component:SignInComponent},{path:"**",component:ListItemComponent}];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { initializeApp, provideFirebaseApp } from '@angular/fire/app';
@@ -19,13 +18,16 @@ import { SignInOrLogInComponent } from './sign-in-or-log-in/sign-in-or-log-in.co
 import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { SignInComponent } from './sign-in/sign-in.component';
+import { ListItemComponent } from './list-item/list-item.component';
+import {MatSelectModule} from '@angular/material/select';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     SignInOrLogInComponent,
-    SignInComponent
+    SignInComponent,
+    ListItemComponent
   ],
   imports: [
     BrowserModule,
@@ -44,7 +46,8 @@ import { SignInComponent } from './sign-in/sign-in.component';
     CommonModule,
     RouterOutlet,
     RouterLink,
-    RouterLinkActive
+    RouterLinkActive,
+    MatSelectModule
   ],
   providers: [
     provideAnimationsAsync(),
