@@ -5,8 +5,15 @@
     align-items: flex-start;
 }
 
-.example-additional-selection {
-  opacity: 0.75;
-  font-size: 0.75em;
+.barre_recherche{
+  margin: 8px 8px 8px 0;
+  float: left;
+}
+.filtre_deroulant{
+  margin: 8px 8px 8px 0;
+  float: left;
 }
 
+table {
+  width: 100%;
+}

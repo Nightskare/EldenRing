@@ -20,6 +20,7 @@ import { CommonModule } from '@angular/common';
 import { SignInComponent } from './sign-in/sign-in.component';
 import { ListItemComponent } from './list-item/list-item.component';
 import {MatSelectModule} from '@angular/material/select';
+import {MatTableModule} from '@angular/material/table';
 
 @NgModule({
   declarations: [
@@ -47,7 +48,8 @@ import {MatSelectModule} from '@angular/material/select';
     RouterOutlet,
     RouterLink,
     RouterLinkActive,
-    MatSelectModule
+    MatSelectModule,
+    MatTableModule
   ],
   providers: [
     provideAnimationsAsync(),
