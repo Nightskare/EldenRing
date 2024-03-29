@@ -17,10 +17,15 @@ import { AuthenticationService } from './authentication.service';
 import { SignInOrLogInComponent } from './sign-in-or-log-in/sign-in-or-log-in.component';
 import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
 import { CommonModule } from '@angular/common';
+import { TestComponent } from './test/test/test.component';
+import { HttpClientModule } from '@angular/common/http';
+import { AccueilComponent } from './accueil/accueil.component';
 import { SignInComponent } from './sign-in/sign-in.component';
 import { ListItemComponent } from './list-item/list-item.component';
 import {MatSelectModule} from '@angular/material/select';
 import {MatTableModule} from '@angular/material/table';
+import { HeaderComponent } from './header/header.component';
+import {MatToolbarModule} from '@angular/material/toolbar';
 
 @NgModule({
   declarations: [
@@ -29,6 +34,10 @@ import {MatTableModule} from '@angular/material/table';
     SignInOrLogInComponent,
     SignInComponent,
     ListItemComponent
+    TestComponent,
+    AccueilComponent,
+    SignInComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
@@ -49,7 +58,9 @@ import {MatTableModule} from '@angular/material/table';
     RouterLink,
     RouterLinkActive,
     MatSelectModule,
-    MatTableModule
+    MatTableModule,
+    HttpClientModule,
+    MatToolbarModule
   ],
   providers: [
     provideAnimationsAsync(),
