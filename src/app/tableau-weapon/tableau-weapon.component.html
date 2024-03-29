@@ -1,0 +1,56 @@
+<div class = tableau>
+    <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+  
+      <!--- Note that these columns can be defined in any order.
+            The actual rendered columns are set as a property on the row definition" -->
+
+      <ng-container matColumnDef="data.name">
+        <th mat-header-cell *matHeaderCellDef> name </th>
+        <td mat-cell *matCellDef="let element"> {{element.data.name}} </td>
+      </ng-container>
+    
+
+      <ng-container matColumnDef="data.image">
+        <th mat-header-cell *matHeaderCellDef> image </th>
+        <td mat-cell *matCellDef="let element"> {{element.data.image}} </td>
+      </ng-container>
+    
+
+      <ng-container matColumnDef="data.description">
+        <th mat-header-cell *matHeaderCellDef> description </th>
+        <td mat-cell *matCellDef="let element"> {{element.data.description}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef='data.category'>
+        <th mat-header-cell *matHeaderCellDef> category </th>
+        <td mat-cell *matCellDef="let element"> {{element.data.category}} </td>
+      </ng-container>
+    
+      <ng-container matColumnDef='data.weight'>
+        <th mat-header-cell *matHeaderCellDef> weight </th>
+        <td mat-cell *matCellDef="let element"> {{element.data.weight}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef='data.attack'>
+        <th mat-header-cell *matHeaderCellDef> attack </th>
+        <td mat-cell *matCellDef="let element"> {{element.data.attack}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef='data.defense'>
+        <th mat-header-cell *matHeaderCellDef> defense </th>
+        <td mat-cell *matCellDef="let element"> {{element.data.defense}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef='data.requiredAttributes'>
+        <th mat-header-cell *matHeaderCellDef> required Attributes </th>
+        <td mat-cell *matCellDef="let element"> {{element.data.requiredAttributes}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef='data.scalesWith'>
+        <th mat-header-cell *matHeaderCellDef> Scaling</th>
+        <td mat-cell *matCellDef="let element"> {{element.data.scalesWith}} </td>
+      </ng-container>
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+  </div>

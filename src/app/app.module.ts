@@ -26,6 +26,10 @@ import {MatSelectModule} from '@angular/material/select';
 import {MatTableModule} from '@angular/material/table';
 import { HeaderComponent } from './header/header.component';
 import {MatToolbarModule} from '@angular/material/toolbar';
+import { TableauWeaponComponent } from './tableau-weapon/tableau-weapon.component';
+import { TableauShieldComponent } from './tableau-shield/tableau-shield.component';
+import { TableauArmorComponent } from './tableau-armor/tableau-armor.component';
+import { TableauTalismanComponent } from './tableau-talisman/tableau-talisman.component';
 
 @NgModule({
   declarations: [
@@ -33,11 +37,15 @@ import {MatToolbarModule} from '@angular/material/toolbar';
     LoginComponent,
     SignInOrLogInComponent,
     SignInComponent,
-    ListItemComponent
+    ListItemComponent,
     TestComponent,
     AccueilComponent,
     SignInComponent,
-    HeaderComponent
+    HeaderComponent,
+    TableauWeaponComponent,
+    TableauShieldComponent,
+    TableauArmorComponent,
+    TableauTalismanComponent
   ],
   imports: [
     BrowserModule,

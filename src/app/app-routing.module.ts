@@ -6,8 +6,9 @@ import { TestComponent } from './test/test/test.component';
 import { AccueilComponent } from './accueil/accueil.component';
 import { SignInComponent } from './sign-in/sign-in.component';
 import { ListItemComponent } from './list-item/list-item.component';
+import { TableauWeaponComponent } from './tableau-weapon/tableau-weapon.component';
 
-const routes: Routes = [{path:'login',component:LoginComponent}, {path:"api", component:TestComponent},{path:'signin',component:SignInComponent}, {path:"**",component:AccueilComponent}];
+const routes: Routes = [{path:'login',component:LoginComponent},{path:'tabWeapon',component:TableauWeaponComponent}, {path:"api", component:TestComponent},{path:'signin',component:SignInComponent}, {path:"**",component:AccueilComponent}];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
