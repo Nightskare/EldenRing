@@ -18,6 +18,7 @@ import { AuthenticationService } from './authentication.service';
 import { SignInOrLogInComponent } from './sign-in-or-log-in/sign-in-or-log-in.component';
 import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
 import { CommonModule } from '@angular/common';
+import { AccueilComponent } from './accueil/accueil.component';
 import { SignInComponent } from './sign-in/sign-in.component';
 import { HeaderComponent } from './header/header.component';
 import {MatToolbarModule} from '@angular/material/toolbar';
@@ -27,6 +28,7 @@ import {MatToolbarModule} from '@angular/material/toolbar';
     AppComponent,
     LoginComponent,
     SignInOrLogInComponent,
+    AccueilComponent,
     SignInComponent,
     HeaderComponent
   ],
