@@ -23,9 +23,6 @@ export class TableauWeaponComponent implements OnInit{
         this.apiService.getWeapons(a.data[i].id).subscribe(b => {
           this.dataSource.data.push(b);
           this.table.renderRows();
-          this.table.dataSource
-          console.log(this.table);
-          console.log(this.table.dataSource);
         });
       }
     });
