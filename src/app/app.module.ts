@@ -39,8 +39,8 @@ import {MatToolbarModule} from '@angular/material/toolbar';
     SignInComponent,
     BuildComponent,
     StatComponent,
-    CharacterComponent
-    ListItemComponent
+    CharacterComponent,
+    ListItemComponent,
     TestComponent,
     AccueilComponent,
     SignInComponent,
