@@ -14,12 +14,12 @@ export interface Shields {
   }
 }
 
-interface PropertiesType {
+export interface PropertiesType {
   name : string;
   amount : number;
 }
 
-interface scalesType{
+export interface scalesType{
   name : string;
   scaling : string;
 }

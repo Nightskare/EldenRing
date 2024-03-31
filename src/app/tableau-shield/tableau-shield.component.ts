@@ -1,5 +1,5 @@
 import { Component, ViewChild } from '@angular/core';
-import { Shields } from '../shields';
+import { PropertiesType, Shields } from '../shields';
 import { MatTable, MatTableDataSource } from '@angular/material/table';
 import { ApiService } from '../api.service';
 
@@ -28,5 +28,18 @@ export class TableauShieldComponent {
       }
     });
     //myData.sort((a, b) => (a.data.id > b.data.id) ? 1 : (a.data.id < b.data.id) ? -1 : 0);
+  }
+
+  public getAllProperties(input : Array<PropertiesType>) : string{
+    var buffer : string = "";
+    for (let index = 0; index < input.length; index++) {
+      const element = input[index];
+      buffer += element.name;
+      buffer += " : ";
+      buffer += element.amount;
+      if(index != input.length-1)
+        buffer += ", "
+    }
+    return buffer;
   }
 }
