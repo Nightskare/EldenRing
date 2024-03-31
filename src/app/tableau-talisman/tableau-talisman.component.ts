@@ -1,7 +1,7 @@
 import { Component, ViewChild } from '@angular/core';
-import { Talismans } from '../talismans';
+import { Talismans } from '../interface/talismans';
 import { MatTable, MatTableDataSource } from '@angular/material/table';
-import { ApiService } from '../api.service';
+import { ApiService } from '../api/api.service';
 
 
 

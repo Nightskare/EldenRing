@@ -1,12 +1,12 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { Armors } from './armors';
-import { Classes } from './classes';
-import { Shields } from './shields';
-import { Talismans } from './talismans';
-import { Weapons } from './weapons';
-import { IdList } from './id-list';
+import { Armors } from '../interface/armors';
+import { Classes } from '../interface/classes';
+import { Shields } from '../interface/shields';
+import { Talismans } from '../interface/talismans';
+import { Weapons } from '../interface/weapons';
+import { IdList } from '../interface/id-list';
 
 @Injectable({
   providedIn: 'root'

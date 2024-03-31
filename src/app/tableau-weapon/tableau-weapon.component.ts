@@ -1,6 +1,6 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { Weapons } from '../weapons';
-import { ApiService } from '../api.service';
+import { Weapons } from '../interface/weapons';
+import { ApiService } from '../api/api.service';
 import {MatTable, MatTableDataSource} from '@angular/material/table';
 
 @Component({

@@ -13,7 +13,7 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatDividerModule} from '@angular/material/divider';
 import {MatButtonModule} from '@angular/material/button';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
-import { AuthenticationService } from './authentication.service';
+import { AuthenticationService } from './api/authentication.service';
 import { SignInOrLogInComponent } from './sign-in-or-log-in/sign-in-or-log-in.component';
 import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
 import { CommonModule } from '@angular/common';

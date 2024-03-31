@@ -1,7 +1,7 @@
 import { Component, ViewChild } from '@angular/core';
-import { Armors } from '../armors';
+import { Armors } from '../interface/armors';
 import { MatTable, MatTableDataSource } from '@angular/material/table';
-import { ApiService } from '../api.service';
+import { ApiService } from '../api/api.service';
 
 const ARMOR_DATA: Armors[] = [
 

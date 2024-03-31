@@ -1,7 +1,7 @@
 import { Component, ViewChild } from '@angular/core';
-import { PropertiesType, Shields } from '../shields';
+import { PropertiesType, Shields } from '../interface/shields';
 import { MatTable, MatTableDataSource } from '@angular/material/table';
-import { ApiService } from '../api.service';
+import { ApiService } from '../api/api.service';
 
 
 @Component({

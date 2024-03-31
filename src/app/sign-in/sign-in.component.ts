@@ -6,7 +6,7 @@ import {
   Validators
 } from '@angular/forms';
 import {ErrorStateMatcher} from '@angular/material/core';
-import { AuthenticationService } from '../authentication.service';
+import { AuthenticationService } from '../api/authentication.service';
 
 export class MyErrorStateMatcher implements ErrorStateMatcher {
   isErrorState(control: FormControl | null, form: FormGroupDirective | NgForm | null): boolean {
