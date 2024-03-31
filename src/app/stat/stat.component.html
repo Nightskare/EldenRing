@@ -1,6 +1,17 @@
-<p>stat works!</p>
+<div>
+    <form>
+        <mat-form-field class="example-full-width">
+            <mat-label>Niveau</mat-label>
+            <input matInput id="level" type="number" [formControl]="level">
+        </mat-form-field>
+        <p>Points non utilisés : {{ level.value }} </p>
+    </form>
+</div>
 <div>
     <div>
         <app-stat-form></app-stat-form>
+    </div>
+    <div>
+        <app-stat-affichage></app-stat-affichage>
     </div>
 </div>

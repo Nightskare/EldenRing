@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 import { FormControl, ReactiveFormsModule } from '@angular/forms';
 
 @Component({
@@ -7,6 +7,16 @@ import { FormControl, ReactiveFormsModule } from '@angular/forms';
   styleUrl: './stat-form.component.css'
 })
 export class StatFormComponent {
-  name = new FormControl('');
-  vigor = new FormControl('');
+  vigorValue = new FormControl('').value;
+  @Output() vigor = new EventEmitter<number>();
+  SendVigor(){
+    this.vigor.emit(Number(this.vigorValue));
+  }
+  esprit= new FormControl('');
+  endurance = new FormControl('');
+  force= new FormControl('');
+  dexterite =new FormControl('');
+  intelligence = new FormControl('');
+  foi= new FormControl('');
+  esoterisme = new FormControl('');
 }
