@@ -1,5 +1,5 @@
 import { Component, ViewChild } from '@angular/core';
-import { PropertiesType, Shields } from '../interface/shields';
+import { PropertiesType,scalesType, Shields } from '../interface/shields';
 import { MatTable, MatTableDataSource } from '@angular/material/table';
 import { ApiService } from '../api/api.service';
 
@@ -37,6 +37,18 @@ export class TableauShieldComponent {
       buffer += element.name;
       buffer += " : ";
       buffer += element.amount;
+      if(index != input.length-1)
+        buffer += ", "
+    }
+    return buffer;
+  }
+  public getAllScales(input : Array<scalesType>) : string{
+    var buffer : string = "";
+    for (let index = 0; index < input.length; index++) {
+      const element = input[index];
+      buffer += element.name;
+      buffer += " : ";
+      buffer += element.scaling;
       if(index != input.length-1)
         buffer += ", "
     }

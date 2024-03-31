@@ -38,17 +38,17 @@
 
     <ng-container matColumnDef='data.defense'>
       <th mat-header-cell *matHeaderCellDef> defense </th>
-      <td mat-cell *matCellDef="let element"> {{element.data.defense}} </td>
+      <td mat-cell *matCellDef="let element"> {{getAllProperties(element.data.defence)}} </td>
     </ng-container>
 
     <ng-container matColumnDef='data.requiredAttributes'>
       <th mat-header-cell *matHeaderCellDef> required Attributes </th>
-      <td mat-cell *matCellDef="let element"> {{element.data.requiredAttributes}} </td>
+      <td mat-cell *matCellDef="let element"> {{getAllProperties(element.data.requiredAttributes)}} </td>
     </ng-container>
 
     <ng-container matColumnDef='data.scalesWith'>
       <th mat-header-cell *matHeaderCellDef> Scaling</th>
-      <td mat-cell *matCellDef="let element"> {{element.data.scalesWith}} </td>
+      <td mat-cell *matCellDef="let element"> {{getAllScales(element.data.scalesWith)}} </td>
     </ng-container>
     <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
     <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
