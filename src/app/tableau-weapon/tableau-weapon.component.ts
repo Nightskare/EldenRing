@@ -2,6 +2,7 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 import { Weapons } from '../interface/weapons';
 import { ApiService } from '../api/api.service';
 import {MatTable, MatTableDataSource} from '@angular/material/table';
+import { PropertiesType, scalesType } from '../interface/weapons';
 
 @Component({
   selector: 'app-tableau-weapon',
@@ -27,5 +28,31 @@ export class TableauWeaponComponent implements OnInit{
       }
     });
     //myData.sort((a, b) => (a.data.id > b.data.id) ? 1 : (a.data.id < b.data.id) ? -1 : 0);
+  }
+  public getAllProperties(input : Array<PropertiesType>) : string{
+    var buffer : string = "";
+    for (let index = 0; index < input.length; index++) {
+      const element = input[index];
+      buffer += element.name;
+      buffer += " : ";
+      buffer += element.amount;
+      if(index != input.length-1)
+        buffer += ", "
+    }
+    return buffer;
+  }
+  public getAllScales(input : Array<scalesType>) : string{
+    var buffer : string = "";
+    for (let index = 0; index < input.length; index++) {
+      const element = input[index];
+      buffer += element.name;
+      if(element.scaling){
+        buffer += " : ";
+        buffer += element.scaling;
+      }
+      if(index != input.length-1)
+        buffer += ", "
+    }
+    return buffer;
   }
 }

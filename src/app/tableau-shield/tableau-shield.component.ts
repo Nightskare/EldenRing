@@ -47,8 +47,10 @@ export class TableauShieldComponent {
     for (let index = 0; index < input.length; index++) {
       const element = input[index];
       buffer += element.name;
-      buffer += " : ";
-      buffer += element.scaling;
+      if(element.scaling){
+        buffer += " : ";
+        buffer += element.scaling;
+      }
       if(index != input.length-1)
         buffer += ", "
     }

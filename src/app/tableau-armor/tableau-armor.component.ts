@@ -1,7 +1,8 @@
 import { Component, ViewChild } from '@angular/core';
-import { Armors } from '../interface/armors';
+import { Armors, PropertiesType } from '../interface/armors';
 import { MatTable, MatTableDataSource } from '@angular/material/table';
 import { ApiService } from '../api/api.service';
+import { scalesType } from '../interface/shields';
 
 const ARMOR_DATA: Armors[] = [
 
@@ -32,4 +33,17 @@ export class TableauArmorComponent {
     });
     //myData.sort((a, b) => (a.data.id > b.data.id) ? 1 : (a.data.id < b.data.id) ? -1 : 0);
   }
+  public getAllProperties(input : Array<PropertiesType>) : string{
+    var buffer : string = "";
+    for (let index = 0; index < input.length; index++) {
+      const element = input[index];
+      buffer += element.name;
+      buffer += " : ";
+      buffer += element.amount;
+      if(index != input.length-1)
+        buffer += ", "
+    }
+    return buffer;
+  }
+
 }
