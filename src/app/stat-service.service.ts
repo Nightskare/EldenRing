@@ -7,7 +7,7 @@ import { BehaviorSubject, Observable } from 'rxjs';
 export class StatServiceService {
   level: number;
   vigor: number;
-  vigorUpdate: BehaviorSubject<number> = new BehaviorSubject<number>(0);
+  private vigorUpdate= new BehaviorSubject<number>(0);
   esprit: number;
   endurance: number;
   force: number;
@@ -39,8 +39,8 @@ export class StatServiceService {
   getVigor(){
     return this.vigor;
   }
-  setVigorUpdate(data:number){
-    this.vigorUpdate.next(data)
+  setVigorUpdate(vigorUpdate:number){
+    this.vigorUpdate.next(vigorUpdate)
   }
   getVigorUpdate(){
     return this.vigorUpdate;

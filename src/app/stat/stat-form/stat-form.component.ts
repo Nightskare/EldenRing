@@ -10,8 +10,9 @@ export class StatFormComponent {
   
   constructor(private service: StatServiceService){}
 
-  vigor = new FormControl('');
-  vigorUpdate= this.vigor;
+  vigor = 0 ;
+  vigorUpdateForm=new FormControl('') ;
+  vigorUpdate=Number(this.vigorUpdateForm);
   esprit= new FormControl('');
   endurance = new FormControl('');
   force= new FormControl('');
@@ -20,7 +21,12 @@ export class StatFormComponent {
   foi= new FormControl('');
   esoterisme = new FormControl('');
   ngOnInit(){
-    this.service.setVigor(Number(this.vigor.value));
-    this.service.setVigorUpdate(Number(this.vigorUpdate.value));
+    this.service.setVigor(Number(this.vigor));
+    this.service.vigorUpdate$.subscribe(vigorUpdate=>this.vigorUpdate=vigorUpdate)
+  }
+  newVigorUpdate(event: Event){
+    this.vigorUpdate=Number((event.target as HTMLInputElement).value);
+    this.service.setVigorUpdate(this.vigorUpdate);
+    console.log(this.vigorUpdate);
   }
 }

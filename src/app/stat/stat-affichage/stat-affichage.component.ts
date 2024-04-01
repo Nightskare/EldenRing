@@ -8,12 +8,15 @@ import { BehaviorSubject } from 'rxjs';
 })
 export class StatAffichageComponent {
   vigor:number;
-  vigorUpdate:BehaviorSubject<number>= new BehaviorSubject<number>(0);
+  vigorUpdate: number;
+  totalvigor:number;
   constructor(private service:StatServiceService){
     this.vigor=0;
+    this.vigorUpdate=0;
+    this.totalvigor=500;
   }
   ngOnInit(): void{
-    this.vigor= this.service.getVigor();
-    this.service.vigorUpdate$.subscribe(this.vigorUpdate);
+    this.vigor= Number(this.service.getVigor());
+    this.service.vigorUpdate$.subscribe(vigorUpdate=>this.vigorUpdate=vigorUpdate)
   }
 }
