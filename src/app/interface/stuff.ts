@@ -1,7 +1,5 @@
-
-export interface FullStuff {
+export interface Stuff{
   userId : string;
-  stuffId : string;
   stuffName : string;
   classId : string;
   helmetId : string;
@@ -10,8 +8,4 @@ export interface FullStuff {
   bootsId : string;
   talismansIds : Array<string>;
   weaponsId : Array<string>;
-}
-
-export interface Stuff{
-
 }
