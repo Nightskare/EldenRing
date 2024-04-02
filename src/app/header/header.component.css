@@ -20,7 +20,7 @@
   
   .button-row .mat-mdc-button-base {
     margin: 8px 8px 8px 0;
-    color: #efd005
+    color: hsl(52, 96%, 48%)
   }
   
   .flex-container {
@@ -45,4 +45,27 @@
     color: #efd005
   }
 
-  
+  .logout {
+    display: flex;
+    justify-content: center;
+
+  }
+
+  .logout .mat-mdc-button-base {
+    color: #efd005;
+    align-items: center;
+  }
+
+  .logout1 {
+    display: flex;
+    justify-content: center;
+  }
+
+  .logout1 .mat-mdc-button-base {
+    color: #efd005;
+    scale: 0.8;
+  }
+
+  p{
+    margin : 0;
+  }

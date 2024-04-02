@@ -2,7 +2,7 @@ import { Component, ViewChild } from '@angular/core';
 import { Armors, PropertiesType } from '../interface/armors';
 import { MatTable, MatTableDataSource } from '@angular/material/table';
 import { ApiService } from '../api/api.service';
-import { scalesType } from '../interface/shields';
+
 
 const ARMOR_DATA: Armors[] = [
 
@@ -45,5 +45,4 @@ export class TableauArmorComponent {
     }
     return buffer;
   }
-
 }
