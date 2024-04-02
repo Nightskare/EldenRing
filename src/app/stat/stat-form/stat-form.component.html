@@ -9,43 +9,43 @@
         <div class="attribut">
             <p>Esprit :</p>
             <mat-form-field style="width: 30%;">
-                <input matInput id="esprit" type="number" [formControl]="esprit">
+                <input matInput id="esprit" type="number" [formControl]="espritUpdateForm" (change)="newEspritUpdate($event)">
             </mat-form-field>
         </div>
         <div class="attribut">
             <p>Endurance :</p>
             <mat-form-field style="width: 30%;">
-                <input matInput id="endurance" type="number" [formControl]="endurance">
+                <input matInput id="endurance" type="number" [formControl]="enduranceUpdateForm" (change)="newEnduranceUpdate($event)">
             </mat-form-field>
         </div>
         <div class="attribut">
             <p>Force :</p>
             <mat-form-field style="width: 30%;">
-                <input matInput id="force" type="number" [formControl]="force">
+                <input matInput id="force" type="number" [formControl]="forceUpdateForm" (change)="newForceUpdate($event)">
             </mat-form-field>
         </div>
         <div class="attribut">
             <p>Dextérité :</p>
             <mat-form-field style="width: 30%;">
-                <input matInput id="dexterite" type="number" [formControl]="dexterite">
+                <input matInput id="dexterite" type="number" [formControl]="dexteriteUpdateForm" (change)="newDexteriteUpdate($event)">
             </mat-form-field>
         </div>
         <div class="attribut">
             <p>Intelligence :</p>
             <mat-form-field style="width: 30%;">
-                <input matInput id="intelligence" type="number" [formControl]="intelligence">
+                <input matInput id="intelligence" type="number" [formControl]="intelligenceUpdateForm" (change)="newIntelligenceUpdate($event)">
             </mat-form-field>
         </div>
         <div class="attribut">
             <p>Foi :</p>
             <mat-form-field style="width: 30%;">
-                <input matInput id="foi" type="number" [formControl]="foi">
+                <input matInput id="foi" type="number" [formControl]="foiUpdateForm" (change)="newFoiUpdate($event)">
             </mat-form-field>
         </div>
         <div class="attribut">
             <p>Ésotérisme :</p>
             <mat-form-field style="width: 30%;">
-                <input matInput id="esoterisme" type="number" [formControl]="esoterisme">
+                <input matInput id="esoterisme" type="number" [formControl]="esoterismeUpdateForm" (change)="newEsoterismeUpdate($event)">
             </mat-form-field>
         </div>
     </div> 

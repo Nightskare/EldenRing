@@ -5,16 +5,24 @@ import { BehaviorSubject, Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class StatServiceService {
+  // init variables
   level: number;
   vigor: number;
   private vigorUpdate= new BehaviorSubject<number>(0);
   esprit: number;
+  private espritUpdate= new BehaviorSubject<number>(0);
   endurance: number;
+  private enduranceUpdate= new BehaviorSubject<number>(0);
   force: number;
+  private forceUpdate= new BehaviorSubject<number>(0);
   dexterite: number;
+  private dexteriteUpdate= new BehaviorSubject<number>(0);
   intelligence: number;
+  private intelligenceUpdate= new BehaviorSubject<number>(0);
   foi: number;
+  private foiUpdate= new BehaviorSubject<number>(0);
   esoterisme: number;
+  private esoterismeUpdate= new BehaviorSubject<number>(0);
   constructor() {
     this.level=0;
     this.vigor=0;
@@ -26,7 +34,15 @@ export class StatServiceService {
     this.foi=0;
     this.esoterisme=0;
    }
+   //Observable
   vigorUpdate$: Observable<number> = this.vigorUpdate.asObservable();
+  espritUpdate$: Observable<number> = this.espritUpdate.asObservable();
+  enduranceUpdate$: Observable<number> = this.enduranceUpdate.asObservable();
+  forceUpdate$: Observable<number> = this.forceUpdate.asObservable();
+  dexteriteUpdate$: Observable<number> = this.dexteriteUpdate.asObservable();
+  intelligenceUpdate$: Observable<number> = this.intelligenceUpdate.asObservable();
+  foiUpdate$: Observable<number> = this.foiUpdate.asObservable();
+  esoterismeUpdate$: Observable<number> = this.esoterismeUpdate.asObservable();
   setLevel(data:number){
     this.level=data
   }
@@ -45,18 +61,42 @@ export class StatServiceService {
   getVigorUpdate(){
     return this.vigorUpdate;
   }
-  
+  setEsprit(data:number){
+    this.esprit=data
+  }
+  getEsprit(){
+    return this.esprit;
+  }
+  setEspritUpdate(espritUpdate:number){
+    this.espritUpdate.next(espritUpdate)
+  }
+  getespritUpdate(){
+    return this.espritUpdate;
+  }
   setEndurance(data:number){
-    this.level=data
+    this.endurance=data
   }
   getEndurance(){
-    return this.level;
+    return this.endurance;
   }
+  setEnduranceUpdate(enduranceUpdate:number){
+    this.enduranceUpdate.next(enduranceUpdate)
+  }
+  getEnduranceUpdate(){
+    return this.enduranceUpdate;
+  }
+  
   setForce(data:number){
     this.level=data
   }
   getForce(){
     return this.level;
+  }
+  setForceUpdate(forceUpdate:number){
+    this.forceUpdate.next(forceUpdate)
+  }
+  getforceUpdate(){
+    return this.forceUpdate;
   }
   setDexterite(data:number){
     this.level=data
@@ -64,22 +104,46 @@ export class StatServiceService {
   getDexterite(){
     return this.level;
   }
+  setDexteriteUpdate(dexteriteUpdate:number){
+    this.dexteriteUpdate.next(dexteriteUpdate)
+  }
+  getDexteriteUpdate(){
+    return this.dexteriteUpdate;
+  }
   setIntelligence(data:number){
-    this.level=data
+    this.intelligence=data
   }
   getIntelligence(){
-    return this.level;
+    return this.intelligence;
+  }
+  setIntelligenceUpdate(intelligenceUpdate:number){
+    this.intelligenceUpdate.next(intelligenceUpdate)
+  }
+  getIntelligenceUpdate(){
+    return this.intelligenceUpdate;
   }
   setFoi(data:number){
-    this.level=data
+    this.foi=data
   }
   getFoi(){
-    return this.level;
+    return this.foi;
+  }
+  setFoiUpdate(foiUpdate:number){
+    this.foiUpdate.next(foiUpdate)
+  }
+  getFoiUpdate(){
+    return this.foiUpdate;
   }
   setEsoterisme(data:number){
-    this.level=data
+    this.esoterisme=data
   }
   getEsoterisme(){
-    return this.level;
+    return this.esoterisme;
+  }
+  setEsoterismeUpdate(esoterismeUpdate:number){
+    this.esoterismeUpdate.next(esoterismeUpdate)
+  }
+  getEsoterismeUpdate(){
+    return this.esoterismeUpdate;
   }
 }
