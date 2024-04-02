@@ -1,25 +1,27 @@
-<div class = barre_recherche>
-    <mat-form-field hintLabel="Item's name">
-      <mat-label>Enter some item's name</mat-label>
-      <input matInput placeholder="ex : bloodhound's fang">
-    </mat-form-field>
-</div>
-<div class = filtre_deroulant>
-    <mat-form-field hintLabel="Item's type">
-    <mat-label>choose item's type</mat-label>
-    <mat-select [(value)]="selected" placeholder="Click here" >
-        <mat-option value="All"> All</mat-option>
-        <mat-option value="Weapons"> Weapons </mat-option>
-        <mat-option value="shield">Shields</mat-option>
-        <mat-option value="armor">Armors </mat-option>
-        <mat-option value="talisman">Talismans</mat-option>
-    </mat-select>
-    </mat-form-field>
-</div>
-<div class = tableaux>
-  <div *ngIf="selected=='All'"><app-tableau-armor></app-tableau-armor><app-tableau-weapon></app-tableau-weapon><app-tableau-talisman></app-tableau-talisman><app-tableau-shield></app-tableau-shield></div>
-  <div *ngIf="selected=='armor'"><app-tableau-armor></app-tableau-armor></div>
-  <div *ngIf="selected=='Weapons'"><app-tableau-weapon></app-tableau-weapon></div>
-  <div *ngIf="selected=='talisman'"><app-tableau-talisman></app-tableau-talisman></div>
-  <div *ngIf="selected=='shield'"><app-tableau-shield></app-tableau-shield></div>
+<div id="total">
+  <div class = barre_recherche>
+      <mat-form-field hintLabel="Item's name">
+        <mat-label>Enter some item's name</mat-label>
+        <input matInput placeholder="ex : bloodhound's fang">
+      </mat-form-field>
+  </div>
+  <div class = filtre_deroulant>
+      <mat-form-field hintLabel="Item's type">
+      <mat-label>choose item's type</mat-label>
+      <mat-select [(value)]="selected" placeholder="Click here" >
+          <mat-option value="All"> All</mat-option>
+          <mat-option value="Weapons"> Weapons </mat-option>
+          <mat-option value="shield">Shields</mat-option>
+          <mat-option value="armor">Armors </mat-option>
+          <mat-option value="talisman">Talismans</mat-option>
+      </mat-select>
+      </mat-form-field>
+  </div>
+  <div class = tableaux>
+    <div *ngIf="selected=='All'"><app-tableau-armor></app-tableau-armor><app-tableau-weapon></app-tableau-weapon><app-tableau-talisman></app-tableau-talisman><app-tableau-shield></app-tableau-shield></div>
+    <div *ngIf="selected=='armor'"><app-tableau-armor></app-tableau-armor></div>
+    <div *ngIf="selected=='Weapons'"><app-tableau-weapon></app-tableau-weapon></div>
+    <div *ngIf="selected=='talisman'"><app-tableau-talisman></app-tableau-talisman></div>
+    <div *ngIf="selected=='shield'"><app-tableau-shield></app-tableau-shield></div>
+  </div>
 </div>

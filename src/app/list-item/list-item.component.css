@@ -16,4 +16,13 @@
 
 .tableaux{
   float: down;
+  opacity: 90%;
+}
+
+#total{ 
+  background-image: url("/assets/fond_liste_item.jpeg"); 
+  height: 1000px;
+  background-size: 100%;
+  overflow-x: hidden;
+  background-repeat: repeat;
 }
