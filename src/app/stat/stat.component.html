@@ -1,5 +1,13 @@
 <div>
     <form>
+        <mat-form-field>
+            <mat-label>Favorite food</mat-label>
+            <mat-select>
+              @for (food of foods; track food) {
+                <mat-option [value]="food.value">{{food.viewValue}}</mat-option>
+              }
+            </mat-select>
+          </mat-form-field>
         <mat-form-field class="example-full-width">
             <mat-label>Niveau</mat-label>
             <input matInput id="level" type="number" [formControl]="level">
