@@ -23,7 +23,7 @@ import { AccueilComponent } from './accueil/accueil.component';
 import { SignInComponent } from './sign-in/sign-in.component';
 import { ListItemComponent } from './list-item/list-item.component';
 import {MatSelectModule} from '@angular/material/select';
-import {MatTableModule} from '@angular/material/table';
+import { MatTableModule} from '@angular/material/table';
 import { HeaderComponent } from './header/header.component';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import { TableauWeaponComponent } from './tableau-weapon/tableau-weapon.component';
