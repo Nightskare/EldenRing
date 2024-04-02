@@ -1,5 +1,5 @@
 import { Injectable, inject } from '@angular/core';
-import { Auth, onAuthStateChanged, createUserWithEmailAndPassword, signInWithEmailAndPassword } from '@angular/fire/auth';
+import { Auth, onAuthStateChanged, createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut } from '@angular/fire/auth';
 
 
 @Injectable({
@@ -38,5 +38,13 @@ export class AuthenticationService {
       .catch((error) => {
         window.alert(error.message);
       });
+  }
+  // Sign out
+  async SignOut() {
+    return signOut(this.auth);
+  }
+  
+  isLogged() {
+    return this.auth.currentUser !== null;
   }
 }

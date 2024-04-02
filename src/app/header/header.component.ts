@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 
-
+import { AuthenticationService } from '../authentication.service';
 
 @Component({
   selector: 'app-header',
@@ -8,5 +8,16 @@ import { Component } from '@angular/core';
   styleUrl: './header.component.css'
 })
 export class HeaderComponent {
+  constructor(public authenticationService: AuthenticationService) {}
+  async logout(){
+    this.authenticationService.SignOut();
+  }
 
+  isLogged(){
+    return this.authenticationService.isLogged();
+  }
+
+  SignOut(){
+    this.authenticationService.SignOut();
+  }
 }
