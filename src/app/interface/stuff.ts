@@ -1,21 +1,17 @@
-import { Armors } from "./armors";
-import { Classes } from "./classes";
-import { Shields } from "./shields";
-import { Talismans } from "./talismans";
-import { Weapons } from "./weapons";
 
-export interface Stuff {
-  id : string;
-  nomDuStuff : string;
-  class : Classes;
-  helmet : Armors;
-  chestplate : Armors;
-  gantlet : Armors;
-  boots : Armors;
-  TalismanUn : Talismans;
-  TalismanDeux : Talismans;
-  TalismanTrois : Talismans;
-  TalismanQuatre : Talismans;
-  LeftWeapon : Weapons | Shields;
-  RightWeapon : Weapons | Shields;
+export interface FullStuff {
+  userId : string;
+  stuffId : string;
+  stuffName : string;
+  classId : string;
+  helmetId : string;
+  chestplateId : string;
+  gantletId : string;
+  bootsId : string;
+  talismansIds : Array<string>;
+  weaponsId : Array<string>;
+}
+
+export interface Stuff{
+
 }
