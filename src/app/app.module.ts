@@ -21,6 +21,9 @@ import { TestComponent } from './test/test/test.component';
 import { HttpClientModule } from '@angular/common/http';
 import { AccueilComponent } from './accueil/accueil.component';
 import { SignInComponent } from './sign-in/sign-in.component';
+import { BuildComponent } from './build/build.component';
+import { StatComponent } from './stat/stat.component';
+import { CharacterComponent } from './character/character.component';
 import { ListItemComponent } from './list-item/list-item.component';
 import {MatSelectModule} from '@angular/material/select';
 import { MatTableModule} from '@angular/material/table';
@@ -31,12 +34,16 @@ import { TableauShieldComponent } from './tableau-shield/tableau-shield.componen
 import { TableauArmorComponent } from './tableau-armor/tableau-armor.component';
 import { TableauTalismanComponent } from './tableau-talisman/tableau-talisman.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     SignInOrLogInComponent,
     SignInComponent,
+    BuildComponent,
+    StatComponent,
+    CharacterComponent,
     ListItemComponent,
     TestComponent,
     AccueilComponent,
