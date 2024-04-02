@@ -1,20 +1,27 @@
-
 <mat-toolbar>
-        <div class="logo_elden">
-           <a href=""><img src="assets/logo_elden_guide-1.png" alt="Elden Ring Logo" width=8% height=10%> </a>
+    <div class="logo_elden">
+        <a href=""><img src="assets/logo_elden_guide-1.png" alt="Elden Ring Logo" width=8% height=10%> </a>
+    </div>
+    <div class="button-milieu">
+        <a button mat-raised-button routerLink="/login" routerLinkActive="active" ariaCurrentWhenActive="page">equipement</a>
+        <a button mat-raised-button routerLink="/signin" routerLinkActive="active" ariaCurrentWhenActive="page">gestion build</a>
+    </div>
+    <div class="grace">
+        <img src="assets/vision_of_grace.webp" alt="Elden Ring Logo" width=12% height=5% style="float:right">
+    </div>
+    <div *ngIf="isLogged()">
+        <div class="logout">
+            <p style="font-size: 20px">{{authenticationService.email}} </p>
         </div>
-        <div class="button-milieu">
-            <a button mat-raised-button routerLink="/login" routerLinkActive="active" ariaCurrentWhenActive="page">equipement</a>
-            <a button mat-raised-button routerLink="/signin" routerLinkActive="active" ariaCurrentWhenActive="page">gestion build</a>
+        <div class="logout1">
+            <a button mat-raised-button (click)="SignOut()" >log out</a>
         </div>
-        <div class="grace">
-            <img src="assets/vision_of_grace.webp" alt="Elden Ring Logo" width=12% height=5% style="float:right">
-        </div>
-        <div class="button-row">
-            <a button mat-raised-button routerLink="/login" routerLinkActive="active" ariaCurrentWhenActive="page">log in</a>
-            <a button mat-raised-button routerLink="/signin" routerLinkActive="active" ariaCurrentWhenActive="page">sign in</a>
-        </div>
+    </div>    
+    <div *ngIf="!isLogged()">
+        <a button mat-raised-button routerLink="/login" routerLinkActive="active" ariaCurrentWhenActive="page">log in</a>
+        <a button mat-raised-button routerLink="/signin" routerLinkActive="active" ariaCurrentWhenActive="page">sign up</a>
+    </div>
 </mat-toolbar>
 
 
-  
+
