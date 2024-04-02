@@ -13,7 +13,7 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatDividerModule} from '@angular/material/divider';
 import {MatButtonModule} from '@angular/material/button';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
-import { AuthenticationService } from './authentication.service';
+import { AuthenticationService } from './api/authentication.service';
 import { SignInOrLogInComponent } from './sign-in-or-log-in/sign-in-or-log-in.component';
 import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
 import { CommonModule } from '@angular/common';
@@ -26,9 +26,13 @@ import { StatComponent } from './stat/stat.component';
 import { CharacterComponent } from './character/character.component';
 import { ListItemComponent } from './list-item/list-item.component';
 import {MatSelectModule} from '@angular/material/select';
-import {MatTableModule} from '@angular/material/table';
+import { MatTableModule} from '@angular/material/table';
 import { HeaderComponent } from './header/header.component';
 import {MatToolbarModule} from '@angular/material/toolbar';
+import { TableauWeaponComponent } from './tableau-weapon/tableau-weapon.component';
+import { TableauShieldComponent } from './tableau-shield/tableau-shield.component';
+import { TableauArmorComponent } from './tableau-armor/tableau-armor.component';
+import { TableauTalismanComponent } from './tableau-talisman/tableau-talisman.component';
 
 
 @NgModule({
@@ -44,7 +48,11 @@ import {MatToolbarModule} from '@angular/material/toolbar';
     TestComponent,
     AccueilComponent,
     SignInComponent,
-    HeaderComponent
+    HeaderComponent,
+    TableauWeaponComponent,
+    TableauShieldComponent,
+    TableauArmorComponent,
+    TableauTalismanComponent
   ],
   imports: [
     BrowserModule,

@@ -12,7 +12,7 @@ export interface Armors {
   }
 }
 
-interface PropertiesType {
+export interface PropertiesType {
   name : string;
   amount : number;
 }

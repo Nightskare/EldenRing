@@ -1,0 +1,47 @@
+<div class = tableau>
+  <table mat-table [dataSource]="dataSource" class="mat-elevation-z8" #table>
+
+    <!--- Note that these columns can be defined in any order.
+          The actual rendered columns are set as a property on the row definition" -->
+
+    <ng-container matColumnDef="data.name">
+      <th mat-header-cell *matHeaderCellDef> name </th>
+      <td mat-cell *matCellDef="let element"> {{element.data.name}} </td>
+    </ng-container>
+
+
+    <ng-container matColumnDef="data.image">
+      <th mat-header-cell *matHeaderCellDef> image </th>
+      <td mat-cell *matCellDef="let element"> <img src="{{element.data.image}}"> </td>
+    </ng-container>
+
+
+    <ng-container matColumnDef="data.description">
+      <th mat-header-cell *matHeaderCellDef> description </th>
+      <td mat-cell *matCellDef="let element"> {{element.data.description}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef='data.category'>
+      <th mat-header-cell *matHeaderCellDef> category </th>
+      <td mat-cell *matCellDef="let element"> {{element.data.category}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef='data.weight'>
+      <th mat-header-cell *matHeaderCellDef> weight </th>
+      <td mat-cell *matCellDef="let element"> {{element.data.weight}} </td>
+    </ng-container>
+    
+    <ng-container matColumnDef='data.dmgNegation'>
+      <th mat-header-cell *matHeaderCellDef> dmgNegation </th>
+      <td mat-cell *matCellDef="let element"> {{getAllProperties(element.data.dmgNegation)}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef='data.resistance'>
+      <th mat-header-cell *matHeaderCellDef> resistance </th>
+      <td mat-cell *matCellDef="let element"> {{getAllProperties(element.data.resistance)}} </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+</div>

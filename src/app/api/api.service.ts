@@ -1,17 +1,18 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { Armors } from './armors';
-import { Classes } from './classes';
-import { Shields } from './shields';
-import { Talismans } from './talismans';
-import { Weapons } from './weapons';
-import { IdList } from './id-list';
+import { Armors } from '../interface/armors';
+import { Classes } from '../interface/classes';
+import { Shields } from '../interface/shields';
+import { Talismans } from '../interface/talismans';
+import { Weapons } from '../interface/weapons';
+import { IdList } from '../interface/id-list';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ApiService {
+  [x: string]: any;
   public baseurl = "https://eldenring.fanapis.com/api/";
   constructor(private http : HttpClient) {  }
 
@@ -24,7 +25,7 @@ export class ApiService {
   }
 
   getShields(id : string) : Observable<Shields>{
-    return this.http.get<Shields>(this.baseurl + "shield/" + id);
+    return this.http.get<Shields>(this.baseurl + "shields/" + id);
   }
 
   getTalismans(id : string) : Observable<Talismans>{

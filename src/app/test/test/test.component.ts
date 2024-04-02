@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { ApiService } from '../../api.service';
-import { IdList } from '../../id-list';
-import { Weapons } from '../../weapons';
+import { ApiService } from '../../api/api.service';
+import { IdList } from '../../interface/id-list';
+import { Weapons } from '../../interface/weapons';
 import { waitForAsync } from '@angular/core/testing';
 
 @Component({

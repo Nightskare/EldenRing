@@ -1,0 +1,9 @@
+table {
+    width: 100%;
+  }
+
+img {
+  object-fit: contain;
+  height: auto;
+  max-width: 100%;
+}
