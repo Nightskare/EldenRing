@@ -29,6 +29,7 @@ import {MatSelectModule} from '@angular/material/select';
 import {MatTableModule} from '@angular/material/table';
 import { HeaderComponent } from './header/header.component';
 import {MatToolbarModule} from '@angular/material/toolbar';
+import { StatFormComponent } from './stat/stat-form/stat-form.component';
 
 
 @NgModule({
@@ -44,7 +45,8 @@ import {MatToolbarModule} from '@angular/material/toolbar';
     TestComponent,
     AccueilComponent,
     SignInComponent,
-    HeaderComponent
+    HeaderComponent,
+    StatFormComponent
   ],
   imports: [
     BrowserModule,
@@ -64,6 +66,7 @@ import {MatToolbarModule} from '@angular/material/toolbar';
     RouterOutlet,
     RouterLink,
     RouterLinkActive,
+    ReactiveFormsModule,
     MatSelectModule,
     MatTableModule,
     HttpClientModule,
