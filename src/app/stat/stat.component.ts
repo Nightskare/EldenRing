@@ -12,7 +12,7 @@ export class StatComponent {
   level = new FormControl('');
   displayedColumns: string[] = ['data.name', 'data.image', 'data.description', 'data.stat'];
   @ViewChild(MatTable) table !: MatTable<any>;
-  dataSource = new MatTableDataSource<Classes>();
+  Classes = new MatTableDataSource<Classes>();
   constructor(public apiService : ApiService) {}
   ngOnInit(){
     this.getAllClasses();
@@ -22,7 +22,7 @@ export class StatComponent {
     this.apiService.getIds("classes").subscribe(a => {
       for(let i : number = 0; i < a.count; i++){
         this.apiService.getClasses(a.data[i].id).subscribe(b => {
-          this.dataSource.data.push(b);
+          this.Classes.data.push(b);
           this.table.renderRows();
         });
       }
