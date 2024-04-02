@@ -9,7 +9,7 @@ import { ListItemComponent } from './list-item/list-item.component';
 import { CharacterComponent } from './character/character.component';
 
 
-const routes: Routes = [{path:'login',component:LoginComponent},{path:'ListeItem',component:ListItemComponent},{path:"api", component:TestComponent},{path:'signin',component:SignInComponent},{path:'build',component:BuildComponent},{path:'character',component:BuildComponent}, {path:"**",component:AccueilComponent}];
+const routes: Routes = [{path:'login',component:LoginComponent},{path:'ListeItem',component:ListItemComponent},{path:"test", component:TestComponent},{path:'signin',component:SignInComponent},{path:'build',component:BuildComponent},{path:'character',component:BuildComponent}, {path:"**",component:AccueilComponent}];
 
 
 @NgModule({

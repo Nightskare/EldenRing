@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { Stuff } from '../interface/stuff';
 import { DatabaseService } from '../api/database.service';
-import { Data } from '@angular/router';
 import { AuthenticationService } from '../api/authentication.service';
 
 @Component({
