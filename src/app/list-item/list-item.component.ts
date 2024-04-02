@@ -16,7 +16,5 @@ import { MatTableDataSource } from '@angular/material/table';
 
 export class ListItemComponent {
     selected = "All"
-    applyFilter(event: Event) {
-      const filterValue = (event.target as HTMLInputElement).value;
-    }
+
 }
