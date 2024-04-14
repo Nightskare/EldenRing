@@ -1,7 +1,7 @@
 .card-personnage {
-    max-width: 600px;
-    max-height: 1020px;
-    margin-left: 200px;
+    max-width: 55%;
+    max-height: 90%;
+    margin-left: 15%;
   }
   
   #box {
@@ -10,6 +10,6 @@
   }
 
   #ImageSilouhette {
-    max-width: 300px;
-    margin-left: 100px;
+    max-width: 60%;
+    margin-left: 15%;
   }
