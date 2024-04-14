@@ -3,7 +3,7 @@
         <div class="attribut">
             <p>Vigueur :</p>
             <mat-form-field style="width: 30%;">
-                <input matInput id="vigorUpdateForm" type="number" [formControl]="vigorUpdateForm" (change)="newVigorUpdate($event)">
+                <input matInput id="vigorUpdateForm" type="number" [formControl]="vigorUpdateForm" (change)="newVigorUpdate($event)" value="1">
             </mat-form-field>
         </div>
         <div class="attribut">
@@ -45,7 +45,7 @@
         <div class="attribut">
             <p>Ésotérisme :</p>
             <mat-form-field style="width: 30%;">
-                <input matInput id="esoterisme" type="number" [formControl]="esoterismeUpdateForm" (change)="newEsoterismeUpdate($event)">
+                <input matInput id="esoterisme" type="number" [formControl]="esoterismeUpdateForm" (change)="newEsoterismeUpdate($event)" value='vigor'>
             </mat-form-field>
         </div>
     </div> 

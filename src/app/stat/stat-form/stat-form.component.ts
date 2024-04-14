@@ -1,6 +1,8 @@
 import { Component, EventEmitter, Output } from '@angular/core';
 import { FormControl, ReactiveFormsModule } from '@angular/forms';
 import { StatServiceService } from '../../stat-service.service';
+import { ApiService } from '../../api.service';
+import { Classes } from '../../classes';
 @Component({
   selector: 'app-stat-form',
   templateUrl: './stat-form.component.html',
@@ -8,7 +10,7 @@ import { StatServiceService } from '../../stat-service.service';
 })
 export class StatFormComponent {
   
-  constructor(private service: StatServiceService){}
+  constructor(private service: StatServiceService , public apiservice: ApiService){}
 
   vigor = 0 ;
   vigorUpdateForm=new FormControl('') ;
@@ -51,6 +53,12 @@ export class StatFormComponent {
     this.service.foiUpdate$.subscribe(foiUpdate=>this.foiUpdate=foiUpdate)
     this.service.setEsoterisme(Number(this.endurance));
     this.service.enduranceUpdate$.subscribe(enduranceUpdate=>this.enduranceUpdate=enduranceUpdate)
+
+
+    this.apiservice.getClasses("17f69d4ac46l0i32hju3peo5nijzbj").subscribe(a=>{
+      this.vigor+=parseInt(a.data.stats['vigor']);
+      
+    })
   }
   newVigorUpdate(event: Event){
     this.vigorUpdate=Number((event.target as HTMLInputElement).value);
