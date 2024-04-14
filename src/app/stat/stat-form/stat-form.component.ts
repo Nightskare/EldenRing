@@ -59,6 +59,7 @@ export class StatFormComponent {
       this.vigor+=parseInt(a.data.stats['vigor']);
       
     })
+    this.vigorUpdateForm.setValue('this.vigor');
   }
   newVigorUpdate(event: Event){
     this.vigorUpdate=Number((event.target as HTMLInputElement).value);
