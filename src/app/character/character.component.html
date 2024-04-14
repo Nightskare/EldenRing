@@ -3,19 +3,19 @@
       <mat-card-title style="padding-left: 200px; color: #efd005;">Votre personnage</mat-card-title>
     </mat-card-header>
     <mat-card-content>
-      <svg width="190" height="90" x="200">
-        <rect id="box" x="0" y="0" width="80" height="80"/>
-        <svg width="80" height="80" x="100">
+      <svg width="300" height="90">                                 <!-- ça c'est pour dimensionner la zone dans laquelle va être un carré -->
+        <rect id="box" x="200" y="0" width="80" height="80"/>              <!-- ça c'est pour dimensionner et positionner le carré -->
+        <svg width="800" height="80" x="200">                           <!-- ça c'est pour dimensionner et positionner l'image dans le carré -->
           <defs>
             <clipPath id="box2">
-              <rect x="2" y="2" width="80" height="80"/>
+              <rect x="2" y="2" width="80" height="80"/>              <!-- ça c'est pour dimensionner et positionner la zone cliquable dans le carré -->
             </clipPath>
           </defs>
-          <a href="url à mettre">
+          <a href="url à mettre">                                  <!-- ça c'est pour choisir vers quel endroit ça envoie quand on clique dans le carré -->
             <image 
               xlink:href="/assets/Fond_accueil.png"
               clip-path="url(#box2)"
-              />
+              />                                                    <!-- ça c'est pour choisir l'image qui s'affiche dans le carré -->
           </a>
         </svg>
       </svg>
