@@ -31,7 +31,8 @@ export class TestComponent {
       dexterite : 0,
       intelligence : 0,
       foi : 0,
-      esoterisme : 0
+      esoterisme : 0,
+      level : 1
     };
     this.getStuff(this.stuff.stuffName);
   }

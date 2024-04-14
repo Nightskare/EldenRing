@@ -16,4 +16,5 @@ export interface Stuff{
   intelligence : number;
   foi : number;
   esoterisme : number;
+  level : number;
 }

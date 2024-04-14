@@ -36,7 +36,8 @@ export class DatabaseService {
       dexterite : 0,
       intelligence : 0,
       foi : 0,
-      esoterisme : 0
+      esoterisme : 0,
+      level : 0
     };
     const docRef = doc(this.firestore, 'stuff', stuff.stuffName);
     const docSnap = await getDoc(docRef);
