@@ -1,0 +1,15 @@
+.card-personnage {
+    max-width: 600px;
+    max-height: 1020px;
+    margin-left: 200px;
+  }
+  
+  #box {
+    fill: #ffffff00;
+    stroke: white;
+  }
+
+  #ImageSilouhette {
+    max-width: 300px;
+    margin-left: 100px;
+  }

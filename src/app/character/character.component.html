@@ -1,1 +1,30 @@
-<p>character works!</p>
+<mat-card class="card-personnage">
+    <mat-card-header>
+      <mat-card-title style="padding-left: 200px; color: #efd005;">Votre personnage</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <svg width="190" height="90" x="200">
+        <rect id="box" x="0" y="0" width="80" height="80"/>
+        <svg width="80" height="80" x="100">
+          <defs>
+            <clipPath id="box2">
+              <rect x="2" y="2" width="80" height="80"/>
+            </clipPath>
+          </defs>
+          <a href="url à mettre">
+            <image 
+              xlink:href="/assets/Fond_accueil.png"
+              clip-path="url(#box2)"
+              />
+          </a>
+        </svg>
+      </svg>
+      <div id="ImageSilouhette">
+        <img mat-card-image src="/assets/silouhette.png">
+      </div>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-button></button>
+      <button mat-button></button>
+    </mat-card-actions>
+  </mat-card>

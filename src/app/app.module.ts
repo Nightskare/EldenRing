@@ -30,6 +30,7 @@ import {MatTableModule} from '@angular/material/table';
 import { HeaderComponent } from './header/header.component';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import { StatFormComponent } from './stat/stat-form/stat-form.component';
+import {MatCardModule} from '@angular/material/card';
 
 
 @NgModule({
@@ -70,7 +71,8 @@ import { StatFormComponent } from './stat/stat-form/stat-form.component';
     MatSelectModule,
     MatTableModule,
     HttpClientModule,
-    MatToolbarModule
+    MatToolbarModule,
+    MatCardModule
   ],
   providers: [
     provideAnimationsAsync(),
