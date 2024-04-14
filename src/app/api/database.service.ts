@@ -1,51 +1,36 @@
 import { Injectable, inject } from '@angular/core';
-import { Firestore, collectionData, collection, addDoc, getDocs, query, QueryDocumentSnapshot } from '@angular/fire/firestore';
-import { Observable } from 'rxjs';
+import { Firestore, deleteDoc, doc, getDoc, setDoc } from '@angular/fire/firestore';
+import { merge, Observable } from 'rxjs';
 import { Stuff } from '../interface/stuff';
 
 @Injectable({
   providedIn: 'root'
 })
 
-class StuffFormat{
-  constructor(readonly userId : string, readonly stuffName : string, readonly classId : string, readonly helmetId : string, readonly chestplateId : string, readonly gantletId : string, readonly bootsId : string, readonly talismansIds : Array<string>, readonly weaponsId : Array<string>){
-
-  }
-}
-
 export class DatabaseService {
   firestore: Firestore = inject(Firestore);
-  converter = {
-    toFirestore(stuff : Stuff){
-      return {
-        userId : stuff.userId,
-        stuffName : stuff.stuffName,
-        classId : stuff.classId,
-        helmetId : stuff.helmetId,
-        chestplateId : stuff.chestplateId,
-        gantletId : stuff.gantletId,
-        bootsId : stuff.bootsId,
-        talismansIds : stuff.talismansIds,
-        weaponsId : stuff.weaponsId
-      }
-    },
-    fromFirestore(snapshot : QueryDocumentSnapshot){
-      const data = snapshot.data()
-      return new StuffFormat(data['userId'], data['stuffName'], data['classId'], data['helmetId'], data['chestplateId'], data['gantletId'], data['bootsId'], data['talismansIds'], data['weaponsId']);
-    }
-  }
 
   constructor() {
   }
 
-  public async createStuff(stuff : Stuff){
-    const docRef = await addDoc(collection(this.firestore, 'EldenGuide').withConverter(this.converter),stuff);
+  public createOrChangeStuff(stuff : Stuff){
+    const docRef = doc(this.firestore, `stuff/${stuff.stuffName}`);
+      return setDoc(docRef, stuff, {merge: true});
   }
 
-  /*public async getStuffs(){
-    return((await getDocs(query(collection(this.firestore, 'EldenGuide')))).docs.map((stuff) => stuff.data()));
-  }*/
-  public async getStuffs() : Promise<Stuff[]>{
-    return (await getDocs(query(collection(this.firestore, 'EldenGuide').withConverter(this.converter)))).docs.map((stuff) => stuff.data());
+  public getStuff(stuff : Stuff) : Stuff{
+    const docRef = doc(this.firestore, 'stuff', stuff.stuffName);
+    getDoc(docRef).then((docSnap)=>{
+      if(docSnap.exists()){
+        return <Stuff>docSnap.data();
+      }
+      return stuff;
+    })
+    return stuff;
+  }
+
+  public removeStuff(stuff : Stuff){
+    const docRef = doc(this.firestore, 'stuff', stuff.stuffName);
+    deleteDoc(docRef);
   }
 }
