@@ -23,7 +23,15 @@ export class TestComponent {
       gantletId: "",
       bootsId: "",
       talismansIds: [],
-      weaponsId: []
+      weaponsId: [],
+      vigor : 0,
+      esprit : 0,
+      endurance : 0,
+      force : 0,
+      dexterite : 0,
+      intelligence : 0,
+      foi : 0,
+      esoterisme : 0
     };
     this.getStuff(this.stuff.stuffName);
   }

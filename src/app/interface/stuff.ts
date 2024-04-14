@@ -8,4 +8,12 @@ export interface Stuff{
   bootsId : string;
   talismansIds : Array<string>;
   weaponsId : Array<string>;
+  vigor : number;
+  esprit : number;
+  endurance : number;
+  force : number;
+  dexterite : number;
+  intelligence : number;
+  foi : number;
+  esoterisme : number;
 }
