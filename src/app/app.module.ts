@@ -17,7 +17,7 @@ import { AuthenticationService } from './api/authentication.service';
 import { SignInOrLogInComponent } from './sign-in-or-log-in/sign-in-or-log-in.component';
 import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
 import { CommonModule } from '@angular/common';
-import { TestComponent } from './test/test/test.component';
+import { TestComponent } from './test/test.component';
 import { HttpClientModule } from '@angular/common/http';
 import { AccueilComponent } from './accueil/accueil.component';
 import { SignInComponent } from './sign-in/sign-in.component';
