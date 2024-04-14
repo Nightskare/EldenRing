@@ -18,15 +18,26 @@ export class DatabaseService {
       return setDoc(docRef, stuff, {merge: true});
   }
 
-  public getStuff(stuff : Stuff) : Stuff{
+  public async getStuff(stuffName : string) : Promise<Stuff>{
+    var stuff : Stuff = {
+      userId: "",
+      stuffName: stuffName,
+      classId: "",
+      helmetId: "",
+      chestplateId: "",
+      gantletId: "",
+      bootsId: "",
+      talismansIds: [],
+      weaponsId: []
+    };
     const docRef = doc(this.firestore, 'stuff', stuff.stuffName);
-    getDoc(docRef).then((docSnap)=>{
-      if(docSnap.exists()){
-        return <Stuff>docSnap.data();
-      }
+    const docSnap = await getDoc(docRef);
+    if(docSnap.exists()){
+      return <Stuff>docSnap.data();
+    } else{
       return stuff;
-    })
-    return stuff;
+    }
+
   }
 
   public removeStuff(stuff : Stuff){

@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { Stuff } from '../interface/stuff';
 import { DatabaseService } from '../api/database.service';
 import { AuthenticationService } from '../api/authentication.service';
+import { isEmpty } from 'rxjs';
 
 @Component({
   selector: 'app-test',
@@ -10,26 +11,27 @@ import { AuthenticationService } from '../api/authentication.service';
 })
 export class TestComponent {
   authenticationService = new AuthenticationService();
-  stuffs : any;
+  stuff : Stuff;
   database = new DatabaseService();
   constructor(){
-    var stuff : Stuff = {
-      userId: "b",
-      stuffName: "c",
-      classId: "d",
-      helmetId: "e",
-      chestplateId: "f",
-      gantletId: "g",
-      bootsId: "h",
-      talismansIds: ["h", "i", "j", "k"],
-      weaponsId: ["l", "m"]
+    this.stuff = {
+      userId: "",
+      stuffName: "",
+      classId: "",
+      helmetId: "",
+      chestplateId: "",
+      gantletId: "",
+      bootsId: "",
+      talismansIds: [],
+      weaponsId: []
     };
-    //this.database.createStuff(stuff);
-    this.yolo();
+    this.getStuff(this.stuff.stuffName);
   }
 
-  async yolo(){
-    this.stuffs = await this.database.getStuffs();
-    console.log(this.stuffs);
+  public getStuff(stuffName : string){
+    this.database.getStuff(stuffName).then((value) => {
+      this.stuff = value;
+      console.log(this.stuff);
+    });
   }
 }
