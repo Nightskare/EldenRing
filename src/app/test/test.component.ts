@@ -140,23 +140,14 @@ export class TestComponent {
       });
       if(this.stuff.weaponsId){
         for(let i = 0; i < 2; i++){
-          var buffer : string = "";
           this.apiService.getWeapons(this.stuff.weaponsId[i]).subscribe(weapon =>{
             if (weapon.success){
               this.handName[i] = weapon.data.name;
-              buffer = weapon.data.name;
-              console.log(i);
-              console.log(weapon);
-              console.log("J'ai une arme");
             }
           });
           this.apiService.getShields(this.stuff.weaponsId[i]).subscribe(weapon =>{
             if (weapon.success){
               this.handName[i] = weapon.data.name;
-              buffer = weapon.data.name;
-              console.log(i);
-              console.log(weapon);
-              console.log("J'ai un shield");
             }
           });
         }
