@@ -139,10 +139,13 @@ export class TestComponent {
           }
       });
       if(this.stuff.weaponsId){
-        for(var i = 0; i < 2; i++){
+        for(let i = 0; i < 2; i++){
+          var buffer : string = "";
           this.apiService.getWeapons(this.stuff.weaponsId[i]).subscribe(weapon =>{
             if (weapon.success){
               this.handName[i] = weapon.data.name;
+              buffer = weapon.data.name;
+              console.log(i);
               console.log(weapon);
               console.log("J'ai une arme");
             }
@@ -150,6 +153,8 @@ export class TestComponent {
           this.apiService.getShields(this.stuff.weaponsId[i]).subscribe(weapon =>{
             if (weapon.success){
               this.handName[i] = weapon.data.name;
+              buffer = weapon.data.name;
+              console.log(i);
               console.log(weapon);
               console.log("J'ai un shield");
             }
@@ -157,7 +162,7 @@ export class TestComponent {
         }
       }
       if(this.stuff.talismansIds){
-        for(var i = 0; i < 4 ; i++){
+        for(let i = 0; i < 4 ; i++){
           this.apiService.getTalismans(this.stuff.talismansIds[i]).subscribe(talismans => {
             this.talismansName[i] = talismans.data.name;
           })
@@ -169,7 +174,7 @@ export class TestComponent {
     this.database.createOrChangeStuff(this.stuff);
   }
 
-  public print(item : string) : string{
+  public print(item : string, index ?: number) : string{
     return item;
   }
 }

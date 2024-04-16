@@ -49,28 +49,28 @@
     <mat-select placeholder="talismansId" (closed)="updateValue()" [(value)]="stuff.talismansIds[0]">
       <mat-option *ngFor="let talisman of talismans" [value]="talisman">{{talisman}}</mat-option>
     </mat-select>
-    <h4>{{print(talismansName[0])}}</h4>
+    <h4>{{talismansName[0]}}</h4>
   </mat-form-field>
   <mat-form-field>
     <mat-label>Talismans #2</mat-label>
     <mat-select placeholder="talismansId" (closed)="updateValue()" [(value)]="stuff.talismansIds[1]">
       <mat-option *ngFor="let talisman of talismans" [value]="talisman">{{talisman}}</mat-option>
     </mat-select>
-    <h4>{{print(talismansName[1])}}</h4>
+    <h4>{{talismansName[2]}}</h4>
   </mat-form-field>
   <mat-form-field>
     <mat-label>Talismans #3</mat-label>
     <mat-select placeholder="talismansId" (closed)="updateValue()" [(value)]="stuff.talismansIds[2]">
       <mat-option *ngFor="let talisman of talismans" [value]="talisman">{{talisman}}</mat-option>
     </mat-select>
-    <h4>{{print(talismansName[2])}}</h4>
+    <h4>{{talismansName[2]}}</h4>
   </mat-form-field>
   <mat-form-field>
     <mat-label>Talismans #4</mat-label>
     <mat-select placeholder="talismansId" (closed)="updateValue()" [(value)]="stuff.talismansIds[3]">
       <mat-option *ngFor="let talisman of talismans" [value]="talisman">{{talisman}}</mat-option>
     </mat-select>
-    <h4>{{print(talismansName[3])}}</h4>
+    <h4>{{talismansName[3]}}</h4>
   </mat-form-field>
   <br>
   <mat-form-field>
@@ -78,13 +78,13 @@
     <mat-select placeholder="shieldsId / weaponsId" (closed)="updateValue()" [(value)]="stuff.weaponsId[0]">
       <mat-option *ngFor="let hand of hands" [value]="hand">{{hand}}</mat-option>
     </mat-select>
-    <h4>{{print(handName[0])}}</h4>
+    <h4>{{handName[0]}}</h4>
   </mat-form-field>
   <mat-form-field>
   <mat-label>Main #2</mat-label>
     <mat-select placeholder="shieldsId / weaponsId" (closed)="updateValue()" [(value)]="stuff.weaponsId[1]">
       <mat-option *ngFor="let hand of hands" [value]="hand">{{hand}}</mat-option>
     </mat-select>
-    <h4>{{print(handName[1])}}</h4>
+    <h4>{{handName[1]}}</h4>
   </mat-form-field>
 </body>
