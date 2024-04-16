@@ -173,8 +173,4 @@ export class TestComponent {
     this.stuff.stuffName = stuffName;
     this.database.createOrChangeStuff(this.stuff);
   }
-
-  public print(item : string, index ?: number) : string{
-    return item;
-  }
 }
