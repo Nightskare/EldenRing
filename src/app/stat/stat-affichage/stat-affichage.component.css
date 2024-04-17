@@ -1,0 +1,15 @@
+.general{
+    display: flex;
+    flex-direction: column;
+}
+.caract{
+    display: flex;
+    justify-content: space-between;
+}
+
+.specific{
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    
+}

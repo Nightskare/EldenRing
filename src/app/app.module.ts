@@ -31,6 +31,8 @@ import { HeaderComponent } from './header/header.component';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import { StatFormComponent } from './stat/stat-form/stat-form.component';
 import {MatCardModule} from '@angular/material/card';
+import { StatAffichageComponent } from './stat/stat-affichage/stat-affichage.component';
+
 
 
 @NgModule({
@@ -47,7 +49,8 @@ import {MatCardModule} from '@angular/material/card';
     AccueilComponent,
     SignInComponent,
     HeaderComponent,
-    StatFormComponent
+    StatFormComponent,
+    StatAffichageComponent
   ],
   imports: [
     BrowserModule,
