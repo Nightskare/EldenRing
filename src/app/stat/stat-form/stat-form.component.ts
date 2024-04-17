@@ -61,7 +61,7 @@ export class StatFormComponent {
       this.foiUpdateForm.setValue(this.foi);
       this.esoterismeUpdateForm.setValue(this.esoterisme);
 
-      //On initialise les valeurs par défaut:
+
 
       //Valeurs donnée par défault dans dans le service
       this.service.setVigor(this.vigor);
