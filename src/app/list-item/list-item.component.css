@@ -1,21 +1,26 @@
 
-.example-form-fields {
+.total {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: flex-start;
 }
 
+.recherche_filtre {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+}
+
 .barre_recherche{
-  margin: 8px 8px 8px 0;
+  margin: 1% 1% 1% 0;
   float: left;
 }
 .filtre_deroulant{
-  margin: 8px 8px 8px 0;
+  margin: 1% 1% 1% 0;
   float: left;
 }
 
 .tableaux{
-  float: down;
   opacity: 90%;
 }
 
