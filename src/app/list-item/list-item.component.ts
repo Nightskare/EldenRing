@@ -16,5 +16,4 @@ import { MatTableDataSource } from '@angular/material/table';
 
 export class ListItemComponent {
     selected = "All"
-
 }
