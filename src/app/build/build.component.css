@@ -1,6 +1,25 @@
 .build{
     display: flex;
 }
+.entete{
+    display:flex;
+}
 div{
     flex: 1 1 auto;
+}
+h1{
+    margin: 0;
+    padding: 1em;
+    color: #efd005;
+}
+.butto{
+    text-align: center;
+    padding: 1em;
+}
+
+
+#maindivbuild{
+    background-image: url("../../assets/Fond_Build.png")  ;
+    background-attachment: fixed;
+    background-size: 120%;
 }
