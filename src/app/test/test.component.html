@@ -1,0 +1,90 @@
+<body>
+  <mat-form-field>
+    <mat-label>Nom du stuff</mat-label>
+    <input matInput placeholder="Stuff de Axel" #stuffName>
+    <button mat-flat-button color="warn" (click)="saveStuff(stuffName.value)">Sauvegarder</button>
+    <button mat-flat-button color="accent" (click)="getStuff(stuffName.value)">Charger</button>
+  </mat-form-field>
+  <br>
+  <mat-form-field>
+    <mat-label>Classe</mat-label>
+    <mat-select matNativeControl required placeholder="classID" (closed)="updateValue()" [(value)]="stuff.classId">
+      <mat-option *ngFor="let class of classes" [value]="class">{{class}}</mat-option>
+    </mat-select>
+    <h4>{{className}}</h4>
+    <p>Vigeur : {{stuff.vigor}}; Esprit : {{stuff.esprit}}; Endurance : {{stuff.endurance}}; Force: {{stuff.force}};<br>Dextérité : {{stuff.dexterite}}; Intelligence : {{stuff.intelligence}}; Foi : {{stuff.foi}}; Esoterisme : {{stuff.esoterisme}};<br>Niveau : {{stuff.level}}</p>
+  </mat-form-field>
+  <br>
+  <mat-form-field>
+    <mat-label>Helmet</mat-label>
+    <mat-select placeholder="armorsId" (closed)="updateValue()" [(value)]="stuff.helmetId">
+      <mat-option *ngFor="let armor of armors" [value]="armor">{{armor}}</mat-option>
+    </mat-select>
+    <h4>{{helmetName}}</h4>
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label>Chestplate</mat-label>
+    <mat-select placeholder="armorsId" (closed)="updateValue()" [(value)]="stuff.chestplateId">
+      <mat-option *ngFor="let armor of armors" [value]="armor">{{armor}}</mat-option>
+    </mat-select>
+    <h4>{{chestplateName}}</h4>
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label>Gantlet</mat-label>
+    <mat-select placeholder="armorsId" (closed)="updateValue()" [(value)]="stuff.gantletId">
+      <mat-option *ngFor="let armor of armors" [value]="armor">{{armor}}</mat-option>
+    </mat-select>
+    <h4>{{gantletName}}</h4>
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label>Boots</mat-label>
+    <mat-select placeholder="armorsId" (closed)="updateValue()" [(value)]="stuff.bootsId">
+      <mat-option *ngFor="let armor of armors" [value]="armor">{{armor}}</mat-option>
+    </mat-select>
+    <h4>{{bootsName}}</h4>
+  </mat-form-field>
+  <br>
+  <mat-form-field>
+    <mat-label>Talismans #1</mat-label>
+    <mat-select placeholder="talismansId" (closed)="updateValue()" [(value)]="stuff.talismansIds[0]">
+      <mat-option *ngFor="let talisman of talismans" [value]="talisman">{{talisman}}</mat-option>
+    </mat-select>
+    <h4>{{talismansName[0]}}</h4>
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label>Talismans #2</mat-label>
+    <mat-select placeholder="talismansId" (closed)="updateValue()" [(value)]="stuff.talismansIds[1]">
+      <mat-option *ngFor="let talisman of talismans" [value]="talisman">{{talisman}}</mat-option>
+    </mat-select>
+    <h4>{{talismansName[1]}}</h4>
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label>Talismans #3</mat-label>
+    <mat-select placeholder="talismansId" (closed)="updateValue()" [(value)]="stuff.talismansIds[2]">
+      <mat-option *ngFor="let talisman of talismans" [value]="talisman">{{talisman}}</mat-option>
+    </mat-select>
+    <h4>{{talismansName[2]}}</h4>
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label>Talismans #4</mat-label>
+    <mat-select placeholder="talismansId" (closed)="updateValue()" [(value)]="stuff.talismansIds[3]">
+      <mat-option *ngFor="let talisman of talismans" [value]="talisman">{{talisman}}</mat-option>
+    </mat-select>
+    <h4>{{talismansName[3]}}</h4>
+  </mat-form-field>
+  <br>
+  <mat-form-field>
+    <mat-label>Main #1</mat-label>
+    <mat-select placeholder="shieldsId / weaponsId" (closed)="updateValue()" [(value)]="stuff.weaponsId[0]">
+      <mat-option *ngFor="let hand of hands" [value]="hand">{{hand}}</mat-option>
+    </mat-select>
+    <h4>{{handName[0]}}</h4>
+  </mat-form-field>
+  <mat-form-field>
+  <mat-label>Main #2</mat-label>
+    <mat-select placeholder="shieldsId / weaponsId" (closed)="updateValue()" [(value)]="stuff.weaponsId[1]">
+      <mat-option *ngFor="let hand of hands" [value]="hand">{{hand}}</mat-option>
+    </mat-select>
+    <h4>{{handName[1]}}</h4>
+  </mat-form-field>
+</body>
