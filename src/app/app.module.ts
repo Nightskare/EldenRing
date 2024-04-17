@@ -33,7 +33,9 @@ import { TableauWeaponComponent } from './tableau-weapon/tableau-weapon.componen
 import { TableauShieldComponent } from './tableau-shield/tableau-shield.component';
 import { TableauArmorComponent } from './tableau-armor/tableau-armor.component';
 import { TableauTalismanComponent } from './tableau-talisman/tableau-talisman.component';
-
+import {StatFormComponent} from './stat/stat-form/stat-form.component'
+import {MatCardModule} from '@angular/material/card';
+import { StatAffichageComponent } from './stat/stat-affichage/stat-affichage.component';
 
 @NgModule({
   declarations: [
@@ -52,7 +54,9 @@ import { TableauTalismanComponent } from './tableau-talisman/tableau-talisman.co
     TableauWeaponComponent,
     TableauShieldComponent,
     TableauArmorComponent,
-    TableauTalismanComponent
+    TableauTalismanComponent,
+    StatAffichageComponent,
+    StatFormComponent
   ],
   imports: [
     BrowserModule,
@@ -75,7 +79,8 @@ import { TableauTalismanComponent } from './tableau-talisman/tableau-talisman.co
     MatSelectModule,
     MatTableModule,
     HttpClientModule,
-    MatToolbarModule
+    MatToolbarModule,
+    MatCardModule
   ],
   providers: [
     provideAnimationsAsync(),

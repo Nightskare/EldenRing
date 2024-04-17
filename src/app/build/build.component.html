@@ -1,10 +1,18 @@
-<p>Bienvenue sur la page de build!</p>
-<div class="build">
-    <div>
-        <app-character></app-character>
+<div id="maindivbuild">
+    <div class="entete">
+        <div>
+            <h1>Bienvenue sur la page de build!</h1>
+        </div>
+        <div class="butto">
+            <a button mat-raised-button routerLink="/login" routerLinkActive="active" ariaCurrentWhenActive="page">Sauvegarder</a>
+        </div>
     </div>
-    <div>
-        <app-stat></app-stat>
+    <div class="build">
+        <div>
+            <app-character></app-character>
+        </div>
+        <div>
+            <app-stat></app-stat>
+        </div>
     </div>
-    
 </div>

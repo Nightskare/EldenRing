@@ -1,0 +1,11 @@
+div{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+}
+
+p{
+    color: #efd005;
+    font-weight:bold;
+}
+
