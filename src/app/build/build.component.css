@@ -4,3 +4,13 @@
 div{
     flex: 1 1 auto;
 }
+h1{
+    margin: 0;
+    padding: 1em;
+    color: #efd005;
+}
+
+#maindivbuild{
+    background-image: url("/assets/Fond_Build.png")  ;
+    background-attachment: fixed;
+}
