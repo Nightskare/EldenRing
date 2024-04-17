@@ -1,11 +1,32 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject, Observable } from 'rxjs';
+import { Stuff } from './interface/stuff';
 
 @Injectable({
   providedIn: 'root'
 })
 export class StatServiceService {
   // init variables
+  private stuff= new BehaviorSubject<Stuff>({
+    userId: "",
+    stuffName: "",
+    classId: "",
+    helmetId: "",
+    chestplateId: "",
+    gantletId: "",
+    bootsId: "",
+    talismansIds: [],
+    weaponsId: [],
+    vigor : 0,
+    esprit : 0,
+    endurance : 0,
+    force : 0,
+    dexterite : 0,
+    intelligence : 0,
+    foi : 0,
+    esoterisme : 0,
+    level : 1
+  });
   private level= new BehaviorSubject<number>(0);
   private levelUpdate= new BehaviorSubject<number>(0);
   private vigor= new BehaviorSubject<number>(0);
@@ -27,6 +48,7 @@ export class StatServiceService {
   constructor() {
   }
    //Observable
+  stuff$: Observable<Stuff> = this.stuff.asObservable();
   level$: Observable<number> = this.level.asObservable();
   vigor$: Observable<number> = this.vigor.asObservable();
   esprit$: Observable<number> = this.esprit.asObservable();
@@ -45,6 +67,12 @@ export class StatServiceService {
   intelligenceUpdate$: Observable<number> = this.intelligenceUpdate.asObservable();
   foiUpdate$: Observable<number> = this.foiUpdate.asObservable();
   esoterismeUpdate$: Observable<number> = this.esoterismeUpdate.asObservable();
+  setStuff(stuff:Stuff){
+    this.stuff.next(stuff)
+  }
+  getStuff(){
+    return this.stuff;
+  }
   setLevel(level:number){
     this.level.next(level)
   }
