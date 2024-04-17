@@ -1,0 +1,9 @@
+.stat{
+    display: flex;
+    flex-direction: column;
+    
+}
+.attribut{
+    display: flex;
+    justify-content: space-between;
+}
