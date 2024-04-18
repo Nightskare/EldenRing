@@ -21,6 +21,6 @@
   <div>
     <button mat-raised-button color="primary" (click)="login(email.value, password.value)">Se connecter</button>
     &nbsp;
-    <button mat-raised-button color="primary" (click)="newAccount(email.value, password.value)">Créer un compte</button>
+    <button mat-raised-button color="primary" routerLink="/signin" routerLinkActive="active" ariaCurrentWhenActive="page">Créer un compte</button>
   </div>
 </div>
