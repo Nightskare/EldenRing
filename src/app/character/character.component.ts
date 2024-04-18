@@ -14,10 +14,11 @@ export class CharacterComponent {
   stuff : Stuff;
   helmetImg: string;
   helmetName: string;
-
+  nameStuff: string;
   constructor(private service: StatServiceService , public apiservice: ApiService){
     this.helmetImg="";
     this.helmetName="";
+    this.nameStuff="Pas de personnage défini";
     this.stuff={
       userId: "",
       stuffName: "",
@@ -44,6 +45,7 @@ export class CharacterComponent {
     this.service.stuff$.subscribe(stuff=>{this.stuff=stuff;this.mettreImageAJour()});
 }
 mettreImageAJour(){
+  this.nameStuff=this.stuff.stuffName;
   if(this.stuff.helmetId != "")
     this.apiservice.getArmors(this.stuff.helmetId).subscribe(armor => {
       if (armor.data){
