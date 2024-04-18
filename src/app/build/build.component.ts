@@ -47,7 +47,7 @@ export class BuildComponent {
     this.getAll();
   }
   ngOnInit(): void{
-    
+
     this.service.stuff$.subscribe(stuff=>this.stuff=stuff)
   }
 
@@ -100,22 +100,23 @@ export class BuildComponent {
       });
   }
 
-  public updateValue(){
+  public updateValue(vara ?: boolean){
     if(this.stuff.classId != "")
       this.apiService.getClasses(this.stuff.classId).subscribe(classes => {
         if (classes.data){
           this.className = classes.data.name;
-          this.stuff.endurance = +classes.data.stats.endurance;
-          this.stuff.vigor = +classes.data.stats.vigor;
-          this.stuff.esoterisme = +classes.data.stats.arcane;
-          this.stuff.foi = +classes.data.stats.faith;
-          this.stuff.force = +classes.data.stats.strength;
-          this.stuff.esprit = +classes.data.stats.mind;
-          this.stuff.level = +classes.data.stats.level;
-          this.stuff.dexterite = +classes.data.stats.dexterity;
-          this.stuff.intelligence = +classes.data.stats.intelligence;
+          if(vara){
+            this.stuff.endurance = +classes.data.stats.endurance;
+            this.stuff.vigor = +classes.data.stats.vigor;
+            this.stuff.esoterisme = +classes.data.stats.arcane;
+            this.stuff.foi = +classes.data.stats.faith;
+            this.stuff.force = +classes.data.stats.strength;
+            this.stuff.esprit = +classes.data.stats.mind;
+            this.stuff.level = +classes.data.stats.level;
+            this.stuff.dexterite = +classes.data.stats.dexterity;
+            this.stuff.intelligence = +classes.data.stats.intelligence;
+          }
           this.service.setStuff(this.stuff);
-          
         }
       });
   }

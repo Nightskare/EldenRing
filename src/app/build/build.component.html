@@ -14,7 +14,7 @@
         <div>
             <mat-form-field>
                 <mat-label>Classe</mat-label>
-                <mat-select matNativeControl required placeholder="classID" (closed)="updateValue()" [(value)]="stuff.classId">
+                <mat-select matNativeControl required placeholder="classID" (closed)="updateValue(true)" [(value)]="stuff.classId">
                   <mat-option *ngFor="let class of classes" [value]="class">{{class}}</mat-option>
                 </mat-select>
                 <h4>{{className}}</h4>
