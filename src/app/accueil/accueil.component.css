@@ -2,5 +2,6 @@
     background-image: url("/assets/Fond_accueil.png"); 
     height: 1200px;
     background-size: 100%;
+    background-attachment: fixed;
     /*background-size: cover;*/
   }

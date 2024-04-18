@@ -3,8 +3,22 @@
         <div>
             <h1>Bienvenue sur la page de build!</h1>
         </div>
-        <div class="butto">
-            <a button mat-raised-button routerLink="/test" routerLinkActive="active" ariaCurrentWhenActive="page">Sauvegarder</a>
+        <div>
+            <mat-form-field>
+                <mat-label>Nom du stuff</mat-label>
+                <input matInput placeholder="Stuff de Axel" #stuffName>
+                <button mat-flat-button color="warn" (click)="saveStuff(stuffName.value)">Sauvegarder</button>
+                <button mat-flat-button color="accent" (click)="getStuff(stuffName.value)">Charger</button>
+            </mat-form-field>
+        </div>
+        <div>
+            <mat-form-field>
+                <mat-label>Classe</mat-label>
+                <mat-select matNativeControl required placeholder="classID" (closed)="updateValue(true)" [(value)]="stuff.classId">
+                  <mat-option *ngFor="let class of classes" [value]="class">{{class}}</mat-option>
+                </mat-select>
+                <h4>{{className}}</h4>
+              </mat-form-field>
         </div>
     </div>
     <div class="build">
@@ -14,5 +28,8 @@
         <div>
             <app-stat></app-stat>
         </div>
+    </div>
+    <div class="butto">
+        <a button mat-raised-button routerLink="/test" routerLinkActive="active" ariaCurrentWhenActive="page">Page enregistrement équipement</a>
     </div>
 </div>

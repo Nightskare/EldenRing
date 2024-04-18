@@ -1,5 +1,8 @@
 body{
   text-align: center;
+  background-image: url("../../assets/Fond_Build.png")  ;
+  background-attachment: fixed;
+  background-size: 120%;
 }
 
 mat-form-field{

@@ -2,145 +2,145 @@
     <div class="caract">
         <p>PV</p>
         <div class="specific">
-            <p>{{vigor*20}}</p>
+            <p>{{vigor*20 | number : '1.1-2'}}</p>
             <p>=></p>
-            <p>{{vigorUpdate*20}}</p>
+            <p>{{vigorUpdate*20| number : '1.1-2'}}</p>
         </div>
     </div>
     <div class="caract">
         <p>PC</p>
         <div class="specific">
-            <p>{{esprit*5}}</p>
+            <p>{{esprit*5| number : '1.1-2'}}</p>
             <p>=></p>
-            <p>{{espritUpdate*5}}</p> 
+            <p>{{espritUpdate*5| number : '1.1-2'}}</p> 
         </div> 
     </div>
     <div class="caract">
         <p>Endurance</p>
         <div class="specific">
-            <p>{{endurance*1.5}}</p>
+            <p>{{endurance*1.5| number : '1.1-2'}}</p>
             <p>=></p>
-            <p>{{enduranceUpdate*1.5}}</p>
+            <p>{{enduranceUpdate*1.5| number : '1.1-2'}}</p>
         </div>
     </div>
     <div class="caract">
         <p>Charge équipé maximum</p>
         <div class="specific">
-            <p>{{endurance*1.2}}</p>
+            <p>{{endurance*1.2| number : '1.1-2'}}</p>
             <p>=></p>
-            <p>{{enduranceUpdate*1.2}}</p>
+            <p>{{enduranceUpdate*1.2| number : '1.1-2'}}</p>
         </div>
     </div>
     <div class="caract">
         <p>Arme droite</p>
         <div class="specific">
-            <p>{{force}}</p>
+            <p>{{force| number : '1.1-2'}}</p>
             <p>=></p>
-            <p>{{forceUpdate}}</p>
+            <p>{{forceUpdate| number : '1.1-2'}}</p>
         </div>
     </div>
     <div class="caract">
         <p>Arme gauche</p>
         <div class="specific">
-            <p>{{force}}</p>
+            <p>{{force| number : '1.1-2'}}</p>
             <p>=></p>
-            <p>{{forceUpdate}}</p>
+            <p>{{forceUpdate| number : '1.1-2'}}</p>
         </div>
     </div>
     <div class="caract">
         <p>Physique</p>
         <div class="specific">
-            <p>X</p>
+            <p>{{force| number : '1.1-2'}}</p>
             <p>=></p>
-            <p>Y</p>
+            <p>{{forceUpdate| number : '1.1-2'}}</p>
         </div>
     </div>
     <div class="caract">
         <p>Frappe</p>
         <div class="specific">
-            <p>X</p>
+            <p>{{dexterite| number : '1.1-2'}}</p>
             <p>=></p>
-            <p>Y</p>
+            <p>{{dexteriteUpdate| number : '1.1-2'}}</p>
         </div>
     </div>
     <div class="caract">
         <p>Taille</p>
         <div class="specific">
-            <p>X</p>
+            <p>{{force+dexterite| number : '1.1-2'}}</p>
             <p>=></p>
-            <p>Y</p>
+            <p>{{forceUpdate+dexteriteUpdate| number : '1.1-2'}}</p>
         </div>
     </div>
     <div class="caract">
         <p>Perçant</p>
         <div class="specific">
-            <p>X</p>
+            <p>{{dexterite+intelligence| number : '1.1-2'}}</p>
             <p>=></p>
-            <p>Y</p>
+            <p>{{dexteriteUpdate+intelligenceUpdate| number : '1.1-2'}}</p>
         </div>
     </div>
     <div class="caract">
         <p>Magie</p>
         <div class="specific">
-            <p>X</p>
+            <p>{{intelligence*20| number : '1.1-2'}}</p>
             <p>=></p>
-            <p>Y</p>
+            <p>{{intelligenceUpdate*20| number : '1.1-2'}}</p>
         </div>
     </div>
     <div class="caract">
         <p>Feu</p>
         <div class="specific">
-            <p>X</p>
+            <p>{{intelligence+force| number : '1.1-2'}}</p>
             <p>=></p>
-            <p>Y</p>
+            <p>{{intelligenceUpdate+forceUpdate| number : '1.1-2'}}</p>
         </div>
     </div>
     <div class="caract">
         <p>Foudre</p>
         <div class="specific">
-            <p>X</p>
+            <p>{{foi+intelligence| number : '1.1-2'}}</p>
             <p>=></p>
-            <p>Y</p>
+            <p>{{foiUpdate+intelligenceUpdate| number : '1.1-2'}}</p>
         </div> 
     </div>
     <div class="caract">
         <p>Sacré</p>
         <div class="specific">
-            <p>X</p>
+            <p>{{foi+intelligence| number : '1.1-2'}}</p>
             <p>=></p>
-            <p>Y</p>
+            <p>{{foiUpdate+intelligenceUpdate| number : '1.1-2'}}</p>
         </div>
     </div>
     <div class="caract">
         <p>Immunité</p>
         <div class="specific">
-            <p>X</p>
+            <p>{{foi+vigor| number : '1.1-2'}}</p>
             <p>=></p>
-            <p>Y</p>
+            <p>{{foiUpdate+vigorUpdate| number : '1.1-2'}}</p>
         </div>
     </div>
     <div class="caract">
         <p>Robustesse</p>
         <div class="specific">
-            <p>X</p>
+            <p>{{vigor+dexterite| number : '1.1-2'}}</p>
             <p>=></p>
-            <p>Y</p>
+            <p>{{vigorUpdate+dexteriteUpdate| number : '1.1-2'}}</p>
         </div> 
     </div>
     <div class="caract">
         <p>Focalisation</p>
         <div class="specific">
-            <p>X</p>
+            <p>{{intelligence+dexterite| number : '1.1-2'}}</p>
             <p>=></p>
-            <p>Y</p>
+            <p>{{intelligenceUpdate+dexteriteUpdate| number : '1.1-2'}}</p>
         </div>
     </div>
     <div class="caract">
         <p>Mort</p>
         <div class="specific">
-            <p>X</p>
+            <p>{{esoterisme*2| number : '1.1-2'}}</p>
             <p>=></p>
-            <p>Y</p>
+            <p>{{esoterisme*2| number : '1.1-2'}}</p>
         </div> 
     </div>
 </div>
